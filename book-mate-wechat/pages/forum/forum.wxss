@@ -1,0 +1,98 @@
+/* pages/forum/forum.wxss */
+page {
+    background-color: rgb(243, 243, 243);
+}
+
+.card {
+    width: 100%;
+    height: 250px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-row {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.user {
+    color: #666;
+    font-size: 32rpx;
+    margin-left: 5px;
+    line-height: 20px;
+}
+
+.title-row {
+    font-size: 40rpx;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.content-row {
+    font-size: 32rpx;
+    color: #999;
+    padding: 5px 15px;
+}
+
+.book-row {
+    width: 95%;
+    height: 85px;
+    background: rgb(250, 250, 250);
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.book-row image {
+    width: 150rpx;
+    height: 75px;
+    margin-top: 5px;
+}
+
+.book-row .left {
+    width: 70%;
+    height: 90px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-row .left .title {
+    font-size: 26rpx;
+    color: #666;
+    margin-top: 15px;
+}
+
+.book-row .left .author, .book-row .left .press {
+    font-size: 26rpx;
+    color: #999;
+    line-height: 1em;
+    margin-top: 10px;
+}
+
+.book-row .left .author {
+    font-size: 26rpx;
+    margin-top: 15px;
+}
+
+.comment-row {
+    font-size: 24rpx;
+    color: #999;
+    margin-right: 15px;
+    margin-top: 8px;
+    text-align: right;
+}

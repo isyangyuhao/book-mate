@@ -1,0 +1,50 @@
+/**index.wxss**/
+
+page {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.logo-title {
+  color: #999;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80rpx;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.loginBtn {
+  background-color: #4db6ac;
+  margin-top: 500rpx;
+  color: #fff;
+  line-height: 80rpx;
+  border: 1px solid #4db6ac;
+  border-radius: 5px;
+}
+
+.registerBtn {
+  background-color: #eeeeee;
+  margin-top: 50rpx;
+  color: #4db6ac;
+  line-height: 80rpx;
+  border: 1px solid #4db6ac;  
+  border-radius: 5px;
+}

@@ -1,0 +1,194 @@
+<!--pages/main/main.wxml-->
+<view class="main-container">
+    
+    <!--通知卡片-->
+    <view class="msg-card">
+        <view class="tag">通知</view>
+        <view class="title">—— 借阅提醒 ——</view>
+        <view class="content">您在2017/5/1借的图书《大数据时代》即将到期,请您按时还书,否则将会影响您的信誉分数。</view>
+        <view class="btn">查看详情</view>
+    </view>
+
+    <!--热门卡片-->
+    <view class="hot-card">
+        <image              src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"/>
+        <view class="hot-card-right">
+            <view class="tag">热门</view>
+            <text class="title">决胜移动金融</text>
+            <text class="author">作者: 沙卡尔·克里希南著</text>
+            <text class="classify">分类: 金融与投资</text>
+            <text class="press">出版社: 中国人民大学出版社</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                4.3
+            </view>
+        </view>
+    </view>
+
+        <view class="hot-card">
+        <image              src="http://img14.360buyimg.com/n1/jfs/t2749/250/3671897338/318265/6e03d665/57981151Ne5f0ad13.jpg"/>
+        <view class="hot-card-right">
+            <view class="tag">热门</view>
+            <text class="title">我们为什么总是看错人</text>
+            <text class="author">作者: 王烁著</text>
+            <text class="classify">分类: 社会科学</text>
+            <text class="press">出版社: 中国文史出版社</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                4.9
+            </view>
+        </view>
+    </view>
+
+    <!--推荐卡片-->
+    <view class="recommend-card">
+        <image              src="http://img12.360buyimg.com/n1/jfs/t3607/232/904294206/121426/3291b78c/5817efd8N20e3ab6d.jpg"/>
+        <view class="recommend-card-right">
+            <view class="tag">推荐</view>
+            <text class="title">家道智慧</text>
+            <text class="author">作者: 李焕云著</text>
+            <text class="classify">分类: 励志与成功</text>
+            <text class="press">出版社: 中国宇航出版社</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                4.3
+            </view>
+        </view>
+    </view>
+
+        <view class="hot-card">
+        <image              src="http://img10.360buyimg.com/n1/jfs/t3658/253/1947719255/1094116/ba0786b5/5836aff8Nd0d5c36c.jpg"/>
+        <view class="hot-card-right">
+            <view class="tag">热门</view>
+            <text class="title">硬笔线描及淡彩技法</text>
+            <text class="author">作者: 张天臻著</text>
+            <text class="classify">分类: 艺术</text>
+            <text class="press">出版社: 中国美术学院出版社</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                <image src="/images/main/star_0.png"/>
+                3.2
+            </view>
+        </view>
+    </view>
+
+    <view class="recommend-card">
+        <image              src="http://img11.360buyimg.com/n1/jfs/t3307/148/1219403705/735857/e2817246/57c800aeN9a3009f6.jpg"/>
+        <view class="recommend-card-right">
+            <view class="tag">推荐</view>
+            <text class="title">土地保护学</text>
+            <text class="author">作者: 张凤荣著</text>
+            <text class="classify">分类: 大中专教材教辅</text>
+            <text class="press">出版社: 科学出版社</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                <image src="/images/main/star_0.png"/>
+                <image src="/images/main/star_0.png"/>
+                2.4
+            </view>
+        </view>
+    </view>
+
+        <view class="hot-card">
+        <image              src="http://img12.360buyimg.com/n1/jfs/t3244/83/1796723197/569130/27ffbee7/57d40642N96a4fbed.jpg"/>
+        <view class="hot-card-right">
+            <view class="tag">热门</view>
+            <text class="title">地理与世界霸权</text>
+            <text class="author">作者: 詹姆斯·菲尔格里夫著</text>
+            <text class="classify">分类: 政治/军事</text>
+            <text class="press">出版社: 上海人民出版社</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                3.8
+            </view>
+        </view>
+    </view>
+
+    <!--新书卡片-->
+    <view class="new-card">
+        <view class="tag">新书</view>
+        <view class="title">—— 近期上新图书 ——</view>
+        <view class="bookImg">
+            <image              src="http://img12.360buyimg.com/n1/jfs/t2734/130/3732380912/271442/e456dd31/579ae98fN8066c510.jpg"/>
+            <image              src="http://img11.360buyimg.com/n1/jfs/t3025/240/247794582/693666/3bfbdf30/57982fb2N481732bb.jpg"/>
+            <image              src="http://img14.360buyimg.com/n1/jfs/t2617/364/3755954830/197711/15914079/57985102N970e3e39.jpg"/>
+        </view>
+    </view>
+
+    <view class="recommend-card">
+        <image              src="http://img10.360buyimg.com/n1/jfs/t2935/277/2058129897/130928/3a051ba1/579aece5Nfbd27c04.jpg"/>
+        <view class="recommend-card-right">
+            <view class="tag">推荐</view>
+            <text class="title">物理思想与人文精神</text>
+            <text class="author">作者: 李梅云著</text>
+            <text class="classify">分类: 大中专教材教辅</text>
+            <text class="press">出版社: 华中科技大学出版社</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                3.7
+            </view>
+        </view>
+    </view>
+
+    <!--论坛卡片-->
+    <view class="forum-card">
+        <view class="tag">书友</view>
+        <view class="content">
+            <text class="user">我叫mad: </text>
+            <text class="article">该书向我们展示了苏德战争的宏大图景，既有全景又不乏细节……也向我们展示了战争中男男女女的英雄主义与巨大成就，他们的忍耐与抗争在西方看来简直难以置信。</text>
+            <view class="forum-book-card">
+                <image src="http://img11.360buyimg.com/n1/jfs/t2896/83/4107123533/149179/c2c32080/57abe8dbN98597398.jpg"></image>
+                <view class="left">
+                    <text class="title">通往柏林之路</text>
+                    <text class="author">作者: 约翰·埃里克森著</text>
+                    <text class="press">出版社: 台海出版社</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="hot-card">
+        <image              src="http://img13.360buyimg.com/n1/jfs/t3511/236/832326364/127006/c7b13384/5816ea1cNbc9af7f4.jpg"/>
+        <view class="hot-card-right">
+            <view class="tag">热门</view>
+            <text class="title">世上没有偶然的奇迹</text>
+            <text class="author">作者: 秦嫣著</text>
+            <text class="classify">分类: 管理</text>
+            <text class="press">出版社: 中信出版集团</text>            
+            <view class="grade">评分: 
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                4.1
+            </view>
+        </view>
+    </view>
+
+</view>

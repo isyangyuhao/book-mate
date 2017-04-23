@@ -1,0 +1,297 @@
+/* pages/main/main.wxss */
+page {
+    background-color: rgb(243, 243, 243);
+    margin-bottom: 20px;
+}
+
+.mian-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 热门和推荐卡片样式 */
+
+.hot-card, .recommend-card {
+    width: 95%;
+    height: 140px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hot-card image, .recommend-card image {
+    width: 200rpx;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.hot-card-right, .recommend-card-right {
+    width: 70%;
+    height: 140px;
+    float: right
+}
+
+.hot-card-right .tag, .recommend-card .tag {
+    border-radius: 5rpx;
+    width: 35px;
+    height: 16px;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 18px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 1px solid #ffb74d;
+    color: #ffb74d;
+}
+
+.recommend-card .tag {
+    border: 1px solid #f48fb1;
+    color: #f48fb1
+}
+
+.hot-card-right .title, .recommend-card-right .title {
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+}
+
+.hot-card-right .author, .recommend-card-right .author {
+    display: block;
+    font-size: 26rpx;
+    margin-top: 8px;
+    color: #999;
+}
+
+.hot-card-right .classify, .recommend-card-right .classify {
+    display: block;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.hot-card-right .press, .recommend-card-right .press {
+    display: block;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.hot-card-right .grade, .recommend-card-right .grade {
+    font-size: 30rpx;
+    color: #666;
+}
+
+.hot-card-right image, .recommend-card-right image {
+    width: 10px;
+    height: 10px;
+}
+
+/* 热门和推荐卡片样式end */
+
+/* 通知卡片 */
+
+.msg-card {
+    width: 95%;
+    height: 160px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-card .tag {
+    border-radius: 5rpx;
+    width: 35px;
+    height: 16px;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 1px solid #4db6ac;
+    color: #4db6ac;
+    align-self: flex-end;
+}
+
+.msg-card .title {
+    width: 100%;
+    display: block;
+    margin-left: 5px;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    color: #666;
+}
+
+.msg-card .content {
+    float: left;
+    color: #999;
+    font-size: 32rpx;
+    margin-top: 10px;
+    text-indent:1em;
+    padding: 1em;
+}
+
+.msg-card .btn {
+    float: left;
+    width: 60%;
+    height: 25px;
+    background-color: #80cbc4;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 32rpx;
+    line-height: 25px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* 通知卡片end */
+
+/* 新书卡片 */
+
+.new-card {
+    width: 95%;
+    height: 180px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.new-card .tag {
+    border-radius: 5rpx;
+    width: 35px;
+    height: 16px;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 1px solid #9fa8da;
+    color: #9fa8da;
+    align-self: flex-end;
+}
+
+.new-card .title {
+    width: 100%;
+    display: block;
+    margin-left: 5px;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    color: #666;
+}
+
+.new-card .bookImg {
+    display: flex;
+    flex-direction: row;
+}
+
+.new-card .bookImg image {
+    width: 200rpx;
+    height: 100px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+/* 新书卡片end */
+
+/* 论坛卡片 */
+
+.forum-card {
+    width: 95%;
+    height: 195px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-card .tag {
+    border-radius: 5rpx;
+    width: 35px;
+    height: 16px;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 1px solid #81d4fa;
+    color: #81d4fa;
+    align-self: flex-end;
+}
+
+.forum-card .content {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-card .user {
+    font-size: 34rpx;
+    color: #666;
+}
+
+.forum-card .article {
+    margin-top: 10px;
+    font-size: 26rpx;
+    color: #999;
+    text-indent:1em;
+}
+
+.forum-book-card {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    background-color: rgba(250, 250, 250, 1);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.forum-book-card image {
+    width: 150rpx;
+    height: 75px;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.forum-book-card .left {
+    width: 70%;
+    height: 90px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-book-card .left .title {
+    font-size: 32rpx;
+    color: #666;
+    margin-top: 15px;
+}
+
+.forum-book-card .left .author, .forum-book-card .left .press {
+    font-size: 28rpx;
+    color: #999;
+    line-height: 1em;
+    margin-top: 10px;
+}
+
+.forum-book-card .left .author {
+    margin-top: 15px;
+}
+
+/* 论坛卡片end */

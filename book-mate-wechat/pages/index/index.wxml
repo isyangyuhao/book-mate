@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container" >
+  <view class="logo">
+    <image class="logo-icon" src="/images/index/index-logo2.png" background-size="cover"></image>
+    <text class="logo-title">"无微不至"的借阅伴侣</text>
+  </view>
+  <view class="button">
+    <view class="loginBtn" bindtap="loginBtnOnClick">登录</view>
+    <view class="registerBtn" bindtap="registerBtnOnClick">注册</view>
+  </view>
+</view>

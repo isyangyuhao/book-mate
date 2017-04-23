@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/forum/forum",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/main/main",
+    "pages/books/books",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4db6ac",
+    "navigationBarTitleText": "借阅伴侣",
+    "navigationBarTextStyle":"write"
+  },
+  "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/main/main",
+                "text": "推荐",
+                "iconPath": "images/tabBar/main_0.png",
+                "selectedIconPath": "images/tabBar/main_1.png"
+            },
+            {
+                "pagePath": "pages/books/books",
+                "text": "书库",
+                "iconPath": "images/tabBar/books_0.png",
+                "selectedIconPath": "images/tabBar/books_1.png"
+            },
+            {
+                "pagePath": "pages/forum/forum",
+                "text": "论坛",
+                "iconPath": "images/tabBar/forum_0.png",
+                "selectedIconPath": "images/tabBar/forum_1.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "用户",
+                "iconPath": "images/tabBar/user_0.png",
+                "selectedIconPath": "images/tabBar/user_1.png"
+            }
+        ],
+        "borderStyle": "white",
+        "selectedColor": "#4db6ac",
+        "color": "#999"
+    }
+}

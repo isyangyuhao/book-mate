@@ -1,0 +1,91 @@
+/* pages/books/books.wxss */
+page {
+    background-color: #fff;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 沉浸式图书搜索样式 */
+
+.search-container {
+    background: #4db6ac;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+
+.books-search-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 60rpx;
+}
+.books-search-container icon {
+    background-color: #fff;
+    padding: 15rpx;
+    border-radius: 5px 0px 0px 5px;
+    float: left;
+}
+.books-search-container input {
+    width: 200px;
+    height: 60rpx;
+    background: #fff;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.scan-btn {
+    border: 1px solid #fff;
+    height: 60rpx;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    width: 150rpx;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+/* 沉浸式图书搜索样式end */
+
+
+/* 分类列表样式 */
+
+.classify {
+    padding-left: 50rpx;
+    font-size: 36rpx;
+    height: 40px;
+    color: #000;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+    flex-direction: row;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 100%;
+    margin-top: 15px;
+    float: left;
+}
+
+.name {
+    margin-left: 15px;
+    float: left;
+}
+
+.arrow {
+    margin-right: 25px;
+    float: right;
+    color: #aaa;
+}
+
+/* 分类列表样式end */
