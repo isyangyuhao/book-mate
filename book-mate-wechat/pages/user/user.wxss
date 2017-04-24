@@ -3,3 +3,83 @@ page {
     background-color: rgb(243, 243, 243);
     width: 100%;
 }
+
+/* 用户信息样式 */
+
+.user-container {
+    width: 100%;
+    height: 200px;
+    background-color: #80cbc4;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.logo image {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+.username {
+    font-size: 40rpx;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.desc {
+    font-size: 30rpx;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* 用户信息样式 end */
+
+/* 设置样式 */
+
+.set-card {
+    width: 100%;
+    height: 50px;
+    margin-top: 2px;
+    background-color: #fff;
+}
+
+.set-card image {
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+    margin-left: 15px;
+    float: left;
+}
+
+.set-card .name {
+    font-size: 36rpx;
+    color: #000;
+    line-height: 50px;
+    margin-left: 10px;
+    float: left;
+}
+
+.set-card .arrow {
+    font-size: 36rpx;
+    color: #666;
+    line-height: 50px;
+    float: right;
+    margin-right: 15px;
+}
+
+/* 设置样式end */

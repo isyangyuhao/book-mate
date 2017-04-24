@@ -1,2 +1,48 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="main-container">
+
+    <!--用户信息-->
+    <view class="user-container">
+        <view class="logo">
+            <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="username">我叫mad</view>
+        <view class="desc">当前信用分数: 81分</view>
+    </view>
+
+    <!--设置选项-->
+    <view class="set-container">
+        <view class="set-card">
+             <image src="/images/setting/borrow.png" />
+            <view class="name">借阅图书</view>
+            <view class="arrow">></view>
+        </view>
+         <view class="set-card">
+            <image src="/images/setting/history.png" />
+            <view class="name">借阅历史</view>
+            <view class="arrow">></view>
+        </view>
+        <view class="set-card">
+            <image src="/images/setting/forum.png" />
+            <view class="name">我的帖子</view>
+            <view class="arrow">></view>
+        </view>
+        <view class="set-card">
+            <image src="/images/setting/comment.png" />
+            <view class="name">我的书评</view>
+            <view class="arrow">></view>
+        </view>
+        <view class="set-card">
+            <image src="/images/setting/set.png" />
+            <view class="name">账号设置</view>
+            <view class="arrow">></view>
+        </view>
+        <view class="set-card" bindtap="exitBtnOnClick">
+            <image src="/images/setting/exit.png" />
+            <view class="name">退出登录</view>
+            <view class="arrow">></view>
+        </view>
+        
+    </view>
+
+</view>

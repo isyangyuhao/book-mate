@@ -38,7 +38,7 @@ page {
 }
 
 .title-row {
-    font-size: 40rpx;
+    font-size: 36rpx;
     margin-left: 15px;
     margin-top: 5px;
 }

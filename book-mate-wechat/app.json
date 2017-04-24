@@ -1,11 +1,11 @@
 {
   "pages":[
-    "pages/forum/forum",
     "pages/index/index",
     "pages/login/login",
     "pages/register/register",
     "pages/main/main",
     "pages/books/books",
+    "pages/forum/forum",
     "pages/user/user"
   ],
   "window":{
