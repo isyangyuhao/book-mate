@@ -4,8 +4,6 @@ Page({
     userInfo: {}
   },
   onLoad: function (options) {
-    var app = getApp();
-    app.getUserInfo();
     var that = this;
     wx.getUserInfo({
       success: function (res) {
