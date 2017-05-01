@@ -79,11 +79,6 @@ page {
     color: #999;
 }
 
-.hot-card-right .grade, .recommend-card-right .grade {
-    font-size: 30rpx;
-    color: #666;
-}
-
 .hot-card-right image, .recommend-card-right image {
     width: 10px;
     height: 10px;

@@ -1,0 +1,54 @@
+<!--pages/book-detail/book-detail.wxml-->
+<view class="main-container">
+    
+    <!--图书详情-->
+    <view class="desc-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <view class="title">决胜移动金融</view>
+            <view class="author">作者：沙卡尔·克里希南著</view>
+            <view class="press">出版社：中国人民大学出版社</view>
+            <view class="classify1">一级分类：金融与投资</view>
+            <view class="address">地址：图书馆B区3-202</view>
+            <view class="grade">评分：
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_1.png"/>
+                <image src="/images/main/star_0.png"/>
+                 <text style="margin-top:-1px; margin-left:2px;">4.2</text>
+            </view>
+        </view>
+    </view>
+
+    <!--内容介绍-->
+    <view class="content-container">
+        <text class="title">内容简介</text>
+        <text class="content">我和王烁做好友、做同事，近20年。佩服之处，便是他对复杂思想的领悟和表达力。读书本来就难，读书快而且能得其精要更难，得其精要而且能够表达精准得当、清晰明白，可谓难上加难。这本书，即为王烁这种能力的一次展现。
+        </text>
+    </view>
+
+    <!--相关书籍-->
+    <view class="recommended-container">
+        <text class="title">喜欢本书的人还可能喜欢</text>
+        <view class="book">
+            <image src="http://img11.360buyimg.com/n1/jfs/t2701/277/3744345907/413293/e9df7873/57987009N6984fd3a.jpg"></image>
+            <image src="http://img12.360buyimg.com/n1/jfs/t3847/312/798218462/179259/e623cdc4/581b09d0Nf05502d1.jpg"></image>
+            <image src="http://img14.360buyimg.com/n1/jfs/t3565/301/1040177650/131851/1a3725da/581b09d0N0a27450c.jpg"></image>
+        </view>
+        <view class="book">
+            <image src="http:////img10.360buyimg.com/n1/jfs/t3217/155/2907738309/426904/cfa8df7/57e89481N8ffe1814.jpg"></image>
+            <image src="http://img12.360buyimg.com/n1/jfs/t3244/83/1796723197/569130/27ffbee7/57d40642N96a4fbed.jpg"></image>
+            <image src="http://img12.360buyimg.com/n1/jfs/t3607/232/904294206/121426/3291b78c/5817efd8N20e3ab6d.jpg"></image>
+        </view>
+    </view>
+
+    <!--执行操作-->
+    <view class="operate-container">
+        <text class="title">您可以执行的操作</text>
+        <view class="btn" id="left" wx:if="{{scanCode == 1}}">借阅本书</view>
+        <view class="disable-btn" id="left" wx:if="{{scanCode == 0}}">扫码借阅</view>
+        <view class="btn" id="right">写文推荐</view>
+    </view>
+
+</view>

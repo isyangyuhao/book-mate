@@ -29,7 +29,7 @@
         </view>
         <view class="set-card">
             <image src="/images/setting/comment.png" />
-            <view class="name">我的书评</view>
+            <view class="name">我的评论</view>
             <view class="arrow">></view>
         </view>
         <view class="set-card">

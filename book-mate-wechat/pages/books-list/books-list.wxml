@@ -1,0 +1,84 @@
+<!--pages/books-list/books-list.wxml-->
+<view class="main-container">
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+    <view class="book-container">
+        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <view class="right">
+            <text class="title">决胜移动金融</text>
+            <text class="desc">作者：沙卡尔·克里希南; 出版社：中国人民大学出版社</text>
+        </view>
+    </view>
+
+</view>

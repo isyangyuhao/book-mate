@@ -45,7 +45,7 @@ page {
 
 .content-row {
     font-size: 32rpx;
-    color: #999;
+    color: #666;
     padding: 5px 15px;
 }
 

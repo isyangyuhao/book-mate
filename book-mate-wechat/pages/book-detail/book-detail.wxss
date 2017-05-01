@@ -1,0 +1,201 @@
+/* pages/book-detail/book-detail.wxss */
+/* 图书详情样式 */
+
+page {
+    background-color: rgb(243, 243, 243);
+}
+
+.desc-container {
+    width: 100%;
+    height: 180px;
+    background-color: #fff;
+}
+
+.desc-container image {
+    width: 250rpx;
+    height: 125px;
+    margin-top: 30px;
+    float: left;
+}
+
+.desc-container .right {
+    width: 50%;
+    height: 165px;
+    float: left;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.right .title {
+    font-size: 36rpx;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.right .author {
+    font-size: 28rpx;
+    color: #333;
+    margin-top: 15px;
+}
+
+.right .press {
+    font-size: 28rpx;
+    color: #333;
+    margin-top: 10px;
+}
+
+.right .classify1 {
+    font-size: 28rpx;
+    color: #333;
+    margin-top: 10px;
+}
+
+.right .address {
+    font-size: 28rpx;
+    color: #333;
+    margin-top: 10px;
+}
+
+.right .grade {
+    font-size: 28rpx;
+    color: #333;
+    float: left;
+}
+
+.right .grade {
+    color: #333;
+    font-size: 28rpx;
+    margin-top: 10px;
+    float: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.right .grade image {
+    width: 10px;
+    height: 10px;
+    margin-top: 0;
+}
+
+/* 图书详情样式end */
+
+/* 图书介绍样式 */
+
+.content-container {
+    width: 100%;
+    float: left;
+    background: #fff;
+    margin-top: 1px;
+}
+
+.content-container .title {
+    font-size: 32rpx;
+    color: #000;
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content-container .content {
+    font-size: 28rpx;
+    color: #333;
+    padding: 15px;
+    display: block;
+    margin-top: -25px;
+    text-indent:1em;
+}
+
+/* 图书介绍样式end */
+
+/* 相关书籍样式 */
+
+.recommended-container {
+    width: 100%;
+    height: 280px;
+    background: #fff;
+    margin-top: 1px;
+    float: left;
+}
+
+.recommended-container .title {
+    font-size: 32rpx;
+    color: #000;
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.recommended-container .book {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.recommended-container image {
+    width: 200rpx;
+    height: 100px;
+    margin: 0 auto;
+}
+
+/* 相关书籍样式end */
+
+/* 执行操作样式 */
+
+.operate-container {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    float: left;
+    margin-top: 1px;
+}
+
+.operate-container .title {
+    font-size: 32rpx;
+    color: #000;
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.operate-container .btn {
+    width: 250rpx;
+    height: 60rpx;
+    border: 1px solid #4db6ac;
+    color: #4db6ac;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 60rpx;
+    margin-top: -10px;
+}
+
+.operate-container .disable-btn {
+    width: 250rpx;
+    height: 60rpx;
+    border: 1px solid #aaa;
+    color: #aaa;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 60rpx;
+    margin-top: -10px;
+}
+
+#left {
+    float: left;
+    margin-left: 40px;
+}
+
+#right {
+    float: right;
+    margin-right: 40px;
+}
+
+/* 执行操作样式end*/

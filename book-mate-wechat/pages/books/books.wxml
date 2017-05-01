@@ -11,7 +11,13 @@
     </view>
     <view style="margin-top: 10px;"></view>
     <!--分类列表-->
+
     <view class="classify">
+        <text class="name"></text> 
+        <text class="arrow"></text>
+    </view>
+
+    <view class="classify" bindtap="booksListBtn">
         <view class="point" style="background-color:#ef9a9a"></view>
         <text class="name">文学</text> 
         <text class="arrow"> > </text>
