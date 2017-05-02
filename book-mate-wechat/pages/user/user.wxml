@@ -22,12 +22,12 @@
             <view class="name">借阅历史</view>
             <view class="arrow">></view>
         </view>
-        <view class="set-card">
+        <view class="set-card" bindtap="userForumBtn">
             <image src="/images/setting/forum.png" />
             <view class="name">我的帖子</view>
             <view class="arrow">></view>
         </view>
-        <view class="set-card">
+        <view class="set-card" bindtap="userCommentBtn">
             <image src="/images/setting/comment.png" />
             <view class="name">我的评论</view>
             <view class="arrow">></view>

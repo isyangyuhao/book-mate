@@ -48,7 +48,7 @@
         <text class="title">您可以执行的操作</text>
         <view class="btn" id="left" wx:if="{{scanCode == 1}}">借阅本书</view>
         <view class="disable-btn" id="left" wx:if="{{scanCode == 0}}">扫码借阅</view>
-        <view class="btn" id="right">写文推荐</view>
+        <view class="btn" id="right" bindtap="addForumBtn">写文推荐</view>
     </view>
 
 </view>

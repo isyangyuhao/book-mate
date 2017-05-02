@@ -1,0 +1,70 @@
+/* pages/forum-add/forum-add.wxss */
+
+button::after {
+    border: 0;
+}
+
+.main-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title-msg {
+    font-size: 36rpx;
+    margin-top: 20px;
+    color: #666;
+}
+
+#title {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    height: 30px;
+    border-radius: 5rpx;
+}
+
+.content-msg {
+    font-size: 36rpx;
+    margin-top: 30px;
+    color: #666;
+}
+
+#content {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 5rpx;
+    height: 300px;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+#cancelBtn {
+    width: 35%;
+    border: 1px solid #4db6ac;
+    color: #4db6ac;
+    background: #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 28rpx;
+}
+
+#sendBtn {
+    width: 35%;
+    color: #fff;
+    border: 1px solid #4db6ac;
+    background: #4db6ac;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 28rpx;
+}

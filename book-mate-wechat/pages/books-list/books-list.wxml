@@ -1,7 +1,7 @@
 <!--pages/books-list/books-list.wxml-->
 <view class="main-container">
 
-    <view class="book-container">
+    <view class="book-container" bindtap="bookDetailBtn">
         <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
         <view class="right">
             <text class="title">决胜移动金融</text>

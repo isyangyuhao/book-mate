@@ -16,5 +16,15 @@ Page({
     wx.redirectTo({
       url: '/pages/index/index'
     })
+  },
+  userForumBtn: function() {
+    wx.navigateTo({
+      url: '/pages/user-forum/user-forum'
+    })
+  },
+  userCommentBtn: function() {
+    wx.navigateTo({
+      url: '/pages/user-comment/user-comment'
+    })
   }
 })

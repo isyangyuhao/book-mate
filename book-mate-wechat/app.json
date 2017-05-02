@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/forum-content/forum-content",
     "pages/index/index",
     "pages/login/login",
     "pages/register/register",
@@ -9,7 +8,11 @@
     "pages/forum/forum",
     "pages/user/user",
     "pages/book-detail/book-detail",
-    "pages/books-list/books-list"
+    "pages/books-list/books-list",
+    "pages/forum-content/forum-content",
+    "pages/forum-add/forum-add",
+    "pages/user-forum/user-forum",
+    "pages/user-comment/user-comment"
   ],
   "window":{
     "backgroundTextStyle":"light",

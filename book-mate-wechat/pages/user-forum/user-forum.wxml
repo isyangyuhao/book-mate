@@ -1,16 +1,12 @@
-<!--pages/forum/forum.wxml-->
+<!--pages/user-forum/user-forum.wxml-->
 <view class="main-container">
 
     <view class="card" bindtap="showForumContentBtn">
-        <view class="user-row">
-            <view class="point"></view>
-            <view class="user">我叫mad：</view>
-        </view>
-        <view class="title-row">一场十年的漂泊梦,再见北京</view>
+        <view class="title-row">一场十年的漂泊梦,再见北京</view><view class="delete">删除</view>
         <view class="content-row">
             昨天被一篇《最近有点为背景感到难过了》刷屏了，作者在文中提到一位北漂十年、今天卖了房子离开北京的同事。小编找来了这位同事分享的他与北京的十年。这段时间离开北京的朋友太多了，小编都快忘了...
         </view>
-        <view class="book-row" catchtap="showBookDetailBtn">
+        <view class="book-row" bindtap="showBookDetailBtn">
             <image src="http://img11.360buyimg.com/n1/jfs/t2896/83/4107123533/149179/c2c32080/57abe8dbN98597398.jpg"></image>
             <view class="left">
                 <text class="title">通往柏林之路</text>
@@ -22,11 +18,7 @@
     </view>
 
     <view class="card">
-        <view class="user-row">
-            <view class="point" style="background-color: #81d4fa;"></view>
-            <view class="user">蜗牛：</view>
-        </view>
-        <view class="title-row">中国动画经典升级</view>
+        <view class="title-row">中国动画经典升级</view><view class="delete">删除</view>
         <view class="content-row">
             中国的动画片是有很光荣的传统和成绩的。它让无数童年目不转睛过，童年长大了，都一直想念它。它也让世界注视过，世界吃惊过它的东方神情和风趣，向往过它的那个奇特国家的颜色和诗意。这是一个很大的骄傲...
         </view>
@@ -42,11 +34,7 @@
     </view>
 
     <view class="card">
-        <view class="user-row">
-            <view class="point" style="background-color: #80cbc4;"></view>
-            <view class="user">张伟：</view>
-        </view>
-        <view class="title-row">正念的革命</view>
+        <view class="title-row">正念的革命</view><view class="delete">删除</view>
         <view class="content-row">
 2009年，"智慧2.0时代"论坛在硅谷召开，发起者包括包括Twitter、Instagram和Facebook公司的总裁，有325人参加了这次论坛，由于这次活动过于成功，它最终发展成为每年一度的正念大会...
         </view>
@@ -62,11 +50,7 @@
     </view>
 
     <view class="card">
-        <view class="user-row">
-            <view class="point"></view>
-            <view class="user">我叫mad：</view>
-        </view>
-        <view class="title-row">一场十年的漂泊梦,再见北京</view>
+        <view class="title-row">一场十年的漂泊梦,再见北京</view><view class="delete">删除</view>
         <view class="content-row">
             昨天被一篇《最近有点为背景感到难过了》刷屏了，作者在文中提到一位北漂十年、今天卖了房子离开北京的同事。小编找来了这位同事分享的他与北京的十年。这段时间离开北京的朋友太多了，小编都快忘了...
         </view>
@@ -80,45 +64,4 @@
         </view>
         <view class="comment-row">2017/05/01, 32评论</view>
     </view>
-
-    <view class="card">
-        <view class="user-row">
-            <view class="point" style="background-color: #81d4fa;"></view>
-            <view class="user">蜗牛：</view>
-        </view>
-        <view class="title-row">中国动画经典升级</view>
-        <view class="content-row">
-            中国的动画片是有很光荣的传统和成绩的。它让无数童年目不转睛过，童年长大了，都一直想念它。它也让世界注视过，世界吃惊过它的东方神情和风趣，向往过它的那个奇特国家的颜色和诗意。这是一个很大的骄傲...
-        </view>
-        <view class="book-row">
-            <image src="http://img14.360buyimg.com/n1/jfs/t3049/325/14841808/531723/34c8c889/57a0090eNf105eedc.jpg"></image>
-            <view class="left">
-                <text class="title">阿凡提幽默故事2比智慧</text>
-                <text class="author">作者: 上海美术电影制片厂著</text>
-                <text class="press">出版社: 外语教学与研究出版社</text>
-            </view>
-        </view>
-        <view class="comment-row">2017/03/28, 23评论</view>
-    </view>
-
-    <view class="card">
-        <view class="user-row">
-            <view class="point" style="background-color: #80cbc4;"></view>
-            <view class="user">张伟：</view>
-        </view>
-        <view class="title-row">正念的革命</view>
-        <view class="content-row">
-2009年，"智慧2.0时代"论坛在硅谷召开，发起者包括包括Twitter、Instagram和Facebook公司的总裁，有325人参加了这次论坛，由于这次活动过于成功，它最终发展成为每年一度的正念大会...
-        </view>
-        <view class="book-row">
-            <image src="http://img14.360buyimg.com/n1/jfs/t3502/336/902815371/570229/39e785/5816e445Ncd530d4f.jpg"></image>
-            <view class="left">
-                <text class="title">正念的革命</text>
-                <text class="author">作者: 约翰·埃里克森著</text>
-                <text class="press">出版社: 九州出版社</text>
-            </view>
-        </view>
-        <view class="comment-row">2017/04/09, 61评论</view>
-    </view>
-
 </view>

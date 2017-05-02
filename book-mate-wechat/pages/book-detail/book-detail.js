@@ -7,5 +7,10 @@ Page({
     if (options.scanCode == 1) {
       this.setData({scanCode: 1});
     }
+  },
+  addForumBtn: function() {
+    wx.navigateTo({
+      url: '/pages/forum-add/forum-add'
+    })
   }
 })

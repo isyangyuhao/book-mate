@@ -1,0 +1,91 @@
+/* pages/user-forum/user-forum.wxss */
+page {
+    background-color: rgb(243, 243, 243);
+}
+
+.card {
+    width: 100%;
+    height: 235px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+}
+
+.title-row {
+    font-size: 36rpx;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.content-row {
+    font-size: 32rpx;
+    color: #666;
+    padding: 5px 15px;
+}
+
+.book-row {
+    width: 95%;
+    height: 85px;
+    background: rgb(250, 250, 250);
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.book-row image {
+    width: 150rpx;
+    height: 75px;
+    margin-top: 5px;
+}
+
+.book-row .left {
+    width: 70%;
+    height: 90px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-row .left .title {
+    font-size: 26rpx;
+    color: #666;
+    margin-top: 15px;
+}
+
+.book-row .left .author, .book-row .left .press {
+    font-size: 26rpx;
+    color: #999;
+    line-height: 1em;
+    margin-top: 10px;
+}
+
+.book-row .left .author {
+    font-size: 26rpx;
+    margin-top: 15px;
+}
+
+.comment-row {
+    font-size: 24rpx;
+    color: #999;
+    margin-right: 15px;
+    margin-top: 8px;
+    text-align: right;
+}
+
+.delete {
+    position:absolute;
+    right:0;
+    top:0;
+    font-size: 24rpx;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 1px solid #4db6ac;
+    border-radius: 5rpx;
+    color: #4db6ac;
+    width: 35px;
+    height: 16px;
+    text-align: center;
+    line-height: 2em;
+}

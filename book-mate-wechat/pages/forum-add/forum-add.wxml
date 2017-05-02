@@ -1,0 +1,17 @@
+<!--pages/forum-add/forum-add.wxml-->
+<view class="main-container">
+
+    <view class="title-msg">文章标题</view>
+
+    <input type="text" id="title" placeholder="请输入不超过20字的文章标题"/>
+
+    <view class="content-msg">书评内容</view>
+
+    <textarea id="content" placeholder="请输入10~500字您对本书的看法"/>
+
+    <view class="button">
+        <button id="cancelBtn" bindtap="cancelBtn">取消发布</button>
+        <button id="sendBtn">发布文章</button>
+    </view>
+
+</view>

@@ -1,0 +1,50 @@
+/* pages/user-comment/user-comment.wxss */
+
+page {
+    background-color: rgb(243, 243, 243);
+}
+
+.main-container {
+    width: 100%;
+}
+
+.comment {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 32rpx;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.content {
+    font-size: 28rpx;
+    line-height: 2em;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.delete {
+    width: 35px;
+    height: 16px;
+    font-size: 24rpx;
+    text-align: center;
+    color: #4db6ac;
+    border-radius: 5rpx;
+    line-height: 2em;
+    float: right;
+    margin-right: 10px;
+    border: 1px solid #4db6ac;
+    margin-top: 10px;
+}
+
+.time {
+    font-size: 24rpx;
+    line-height: 2em;
+    margin-left: 10px;
+    color: #666;
+}
