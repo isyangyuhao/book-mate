@@ -26,5 +26,20 @@ Page({
     wx.navigateTo({
       url: '/pages/user-comment/user-comment'
     })
+  },
+  userBorrowBtn: function() {
+    wx.navigateTo({
+      url: '/pages/user-borrow/user-borrow'
+    })
+  },
+  userHistoryBtn: function() {
+    wx.navigateTo({
+      url: '/pages/user-history/user-history'
+    })
+  },
+  userSettingBtn: function() {
+    wx.navigateTo({
+      url: '/pages/user-setting/user-setting'
+    })
   }
 })

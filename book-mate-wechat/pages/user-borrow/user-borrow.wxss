@@ -1,0 +1,37 @@
+/* pages/user-borrow/user-borrow.wxss */
+page {
+    background-color: rgb(243, 243, 243);
+}
+
+.main-container {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 450rpx;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 32rpx;
+    line-height: 2em;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.card view {
+    margin: 10px;
+}
+
+.card .btn {
+    width: 400rpx;
+    height: 60rpx;
+    background: #fff;
+    color: #4db6ac;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 28rpx;
+    margin-top: 45rpx;
+    border: 1px solid #4db6ac;
+}

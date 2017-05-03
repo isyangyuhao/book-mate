@@ -1,0 +1,46 @@
+<!--pages/user-history/user-history.wxml-->
+<view class="main-container">
+
+    <view class="card">
+        <view style="margin-top:10px;"></view>
+        <view>借阅图书：《决胜移动金融》</view>
+        <view>借阅时间：2017-05-01 12:00</view>
+        <view>还书时间：2017-06-01 12:00</view>
+    </view>
+
+    <view class="card">
+        <view style="margin-top:10px;"></view>
+        <view>借阅图书：《决胜移动金融》</view>
+        <view>借阅时间：2017-05-01 12:00</view>
+        <view>还书时间：2017-06-01 12:00</view>
+    </view>
+
+    <view class="card">
+        <view style="margin-top:10px;"></view>
+        <view>借阅图书：《决胜移动金融》</view>
+        <view>借阅时间：2017-05-01 12:00</view>
+        <view>还书时间：2017-06-01 12:00</view>
+    </view>
+
+    <view class="card">
+        <view style="margin-top:10px;"></view>
+        <view>借阅图书：《决胜移动金融》</view>
+        <view>借阅时间：2017-05-01 12:00</view>
+        <view>还书时间：2017-06-01 12:00</view>
+    </view>
+
+    <view class="card">
+        <view style="margin-top:10px;"></view>
+        <view>借阅图书：《决胜移动金融》</view>
+        <view>借阅时间：2017-05-01 12:00</view>
+        <view>还书时间：2017-06-01 12:00</view>
+    </view>
+
+    <view class="card">
+        <view style="margin-top:10px;"></view>
+        <view>借阅图书：《决胜移动金融》</view>
+        <view>借阅时间：2017-05-01 12:00</view>
+        <view>还书时间：2017-06-01 12:00</view>
+    </view>
+
+</view>

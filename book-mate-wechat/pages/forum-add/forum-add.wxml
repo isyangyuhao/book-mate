@@ -11,7 +11,7 @@
 
     <view class="button">
         <button id="cancelBtn" bindtap="cancelBtn">取消发布</button>
-        <button id="sendBtn">发布文章</button>
+        <button id="sendBtn">保存设置</button>
     </view>
 
 </view>

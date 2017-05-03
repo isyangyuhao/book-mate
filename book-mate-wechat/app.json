@@ -12,6 +12,9 @@
     "pages/forum-content/forum-content",
     "pages/forum-add/forum-add",
     "pages/user-forum/user-forum",
+    "pages/user-borrow/user-borrow",
+    "pages/user-history/user-history",
+    "pages/user-setting/user-setting",
     "pages/user-comment/user-comment"
   ],
   "window":{

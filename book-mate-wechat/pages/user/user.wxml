@@ -12,12 +12,12 @@
 
     <!--设置选项-->
     <view class="set-container">
-        <view class="set-card">
+        <view class="set-card" bindtap="userBorrowBtn">
              <image src="/images/setting/borrow.png" />
             <view class="name">借阅图书</view>
             <view class="arrow">></view>
         </view>
-         <view class="set-card">
+         <view class="set-card" bindtap="userHistoryBtn">
             <image src="/images/setting/history.png" />
             <view class="name">借阅历史</view>
             <view class="arrow">></view>
@@ -32,7 +32,7 @@
             <view class="name">我的评论</view>
             <view class="arrow">></view>
         </view>
-        <view class="set-card">
+        <view class="set-card" bindtap="userSettingBtn">
             <image src="/images/setting/set.png" />
             <view class="name">账号设置</view>
             <view class="arrow">></view>
