@@ -84,8 +84,8 @@ page {
     border: 1px solid #4db6ac;
     border-radius: 5rpx;
     color: #4db6ac;
-    width: 35px;
-    height: 16px;
+    width: 70rpx;
+    height: 35rpx;
     text-align: center;
-    line-height: 2em;
+    line-height: 40rpx;
 }

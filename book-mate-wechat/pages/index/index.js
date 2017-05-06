@@ -1,7 +1,6 @@
 //index.js
 Page({
   data: {
-    
   },
   loginBtnOnClick: () => {
     wx.navigateTo({

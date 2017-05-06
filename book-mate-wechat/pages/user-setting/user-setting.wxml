@@ -27,10 +27,10 @@
     </checkbox-group>
 
     <checkbox-group class="group" bindchange="checkboxRecommend" class="checkboxSetting">
-        <label class="" for="recommend"><text>个人推荐数量</text></label>
+        <label class="" for="recommend"><text>个人推荐数量: {{recommendMsg}}</text></label>
     </checkbox-group>
 
-    <slider bindchange="sliderChange" step="20" value="60"/>
+    <slider bindchange="sliderChange" step="30" value="60" max="90" activeColor="#4db6ac"/>
 
     <view class="button">
         <button id="cancelBtn" bindtap="cancelBtn">取消</button>

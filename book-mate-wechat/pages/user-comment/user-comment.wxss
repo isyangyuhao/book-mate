@@ -29,13 +29,13 @@ page {
 }
 
 .delete {
-    width: 35px;
-    height: 16px;
+    width: 70rpx;
+    height: 35rpx;
     font-size: 24rpx;
     text-align: center;
     color: #4db6ac;
     border-radius: 5rpx;
-    line-height: 2em;
+    line-height: 40rpx;
     float: right;
     margin-right: 10px;
     border: 1px solid #4db6ac;

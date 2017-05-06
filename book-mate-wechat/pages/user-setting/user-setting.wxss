@@ -70,3 +70,7 @@ button::after {
     margin-left: 20px;
     font-size: 28rpx;
 }
+
+.wx-checkbox-input-checked::before {
+    color: #4db6ac;
+}
