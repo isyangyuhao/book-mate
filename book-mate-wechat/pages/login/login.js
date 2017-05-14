@@ -11,20 +11,28 @@ Page({
   },
   formSubmit: (e) => {
     console.log('loginMsg: ', e.detail.value);
-    if (e.detail.value.username == "root" && e.detail.value.password == "root") {
-      //登录成功
-      //微信端登录
-      var app = getApp();
-      app.getUserInfo();
-      wx.switchTab({
-        url: '/pages/main/main'
-      })
-    } else {
-      //登录失败
-      wx.redirectTo({
-        url: '/pages/login/login?errorStatus=1'
-      })
-    }
+    wx.request({
+      url: getApp().globalData.url + 'api-user-login',
+      data: { username: e.detail.value.username, password: e.detail.value.password },
+      method: 'GET',
+      success: function (res) {
+        if (res.data != "") {
+          //登录成功
+          //微信端登录
+          var app = getApp();
+          app.getUserInfo();
+          getApp().globalData.user = res.data;
+          wx.switchTab({
+            url: '/pages/main/main'
+          })
+        } else {
+          //登录失败
+          wx.redirectTo({
+            url: '/pages/login/login?errorStatus=1'
+          })
+        }
+      }
+    });
   },
   navBtnOnClick: () => {
     wx.redirectTo({

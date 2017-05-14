@@ -5,6 +5,7 @@
     "pages/register/register",
     "pages/main/main",
     "pages/books/books",
+    "pages/books-search/books-search",
     "pages/forum/forum",
     "pages/user/user",
     "pages/book-detail/book-detail",

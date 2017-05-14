@@ -71,7 +71,6 @@ page {
 .point {
     width: 10px;
     height: 10px;
-    background-color: orange;
     border-radius: 100%;
     margin-top: 15px;
     float: left;

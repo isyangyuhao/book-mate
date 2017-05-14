@@ -3,20 +3,59 @@
     
     <!--图书详情-->
     <view class="desc-container">
-        <image src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"></image>
+        <image src="http:{{book.bookImageBig}}"></image>
         <view class="right">
-            <view class="title">决胜移动金融</view>
-            <view class="author">作者：沙卡尔·克里希南著</view>
-            <view class="press">出版社：中国人民大学出版社</view>
-            <view class="classify1">一级分类：金融与投资</view>
-            <view class="address">地址：图书馆B区3-202</view>
+            <view class="title">{{book.bookName}}
+                <text wx:if="{{book.bookResidue}}">(暂无)</text>
+            </view>
+            <view class="author">作者：{{book.bookAuthor}}</view>
+            <view class="press">出版社：{{book.bookPress}}</view>
+            <view class="classify1">一级分类：{{book.bookClassifyOne}}</view>
+            <view class="address">地址：{{book.bookAddress}}</view>
             <view class="grade">评分：
-                <image src="/images/main/star_1.png"/>
-                <image src="/images/main/star_1.png"/>
-                <image src="/images/main/star_1.png"/>
-                <image src="/images/main/star_1.png"/>
-                <image src="/images/main/star_0.png"/>
-                 <text style="margin-top:-1px; margin-left:2px;">4.2</text>
+                <view  wx:if="{{book.bookGrade<0.5}}">
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=0.5 && book.bookGrade<1.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=1.5 && book.bookGrade<2.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                    <view  wx:if="{{book.bookGrade>=2.5 && book.bookGrade<3.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=3.5 && book.bookGrade<4.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=4.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">{{book.bookGrade}}</text>
             </view>
         </view>
     </view>
@@ -24,7 +63,11 @@
     <!--内容介绍-->
     <view class="content-container">
         <text class="title">内容简介</text>
-        <text class="content">我和王烁做好友、做同事，近20年。佩服之处，便是他对复杂思想的领悟和表达力。读书本来就难，读书快而且能得其精要更难，得其精要而且能够表达精准得当、清晰明白，可谓难上加难。这本书，即为王烁这种能力的一次展现。
+        <text class="content" wx:if="{{book.bookDesc != ''}}">
+            {{book.bookDesc}}
+        </text>
+        <text class="content" wx:if="{{book.bookDesc == ''}}">
+            暂无简介
         </text>
     </view>
 
@@ -46,9 +89,9 @@
     <!--执行操作-->
     <view class="operate-container">
         <text class="title">您可以执行的操作</text>
-        <view class="btn" id="left" wx:if="{{scanCode == 1}}">借阅本书</view>
-        <view class="disable-btn" id="left" wx:if="{{scanCode == 0}}">扫码借阅</view>
-        <view class="btn" id="right" bindtap="addForumBtn">写文推荐</view>
+        <view class="btn btn-left"  wx:if="{{scanCode == 1}}">借阅本书</view>
+        <view class="disable-btn btn-left"  wx:if="{{scanCode == 0}}">扫码借阅</view>
+        <view class="btn btn-right" id="{{book.bookId}}" bindtap="addForumBtn">写文推荐</view>
     </view>
 
 </view>

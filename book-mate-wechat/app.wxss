@@ -8,3 +8,43 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.background-color0 {
+  background-color: #f8bbd0;
+}
+
+.background-color1 {
+  background-color: #b39ddb;
+}
+
+.background-color2 {
+  background-color: #90caf9;
+}
+
+.background-color3 {
+  background-color: #80deea;
+}
+
+.background-color4 {
+  background-color: #a5d6a7;
+}
+
+.background-color5 {
+  background-color: #e6ee9c;
+}
+
+.background-color6 {
+  background-color: #ffe082;
+}
+
+.background-color7 {
+  background-color: #ffab91;
+}
+
+.background-color8 {
+  background-color: #b0bec5;
+}
+
+.background-color9 {
+  background-color: #ef9a9a;
+}

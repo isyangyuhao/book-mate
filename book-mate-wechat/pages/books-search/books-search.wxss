@@ -1,0 +1,42 @@
+/* pages/books-search/books-search.wxss */
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-container {
+    width: 97%;
+    height: 140rpx;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+}
+
+.book-container image {
+    height: 120rpx;
+    width: 100rpx;
+    margin-top: 10rpx;
+    float: left;
+}
+
+.book-container .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.book-container .title {
+    font-size: 32rpx;
+    display: block;
+    padding-top: 16px;
+    margin-left: 10px;
+}
+
+.book-container .desc {
+    font-size: 26rpx;
+    color: #666;
+    display: block;
+    padding-top: 10px;
+    margin-left: 10px;
+}

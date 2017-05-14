@@ -1,7 +1,9 @@
 // pages/user/user.js
 Page({
   data: {
-    userInfo: {}
+    userInfo: {},
+    username: "",
+    credit: 80
   },
   onLoad: function (options) {
     var that = this;
@@ -10,9 +12,19 @@ Page({
         var userInfo = res.userInfo;
         that.setData({ userInfo: userInfo });
       }
-    })
+    });
+    let name = getApp().globalData.user.userUsername;
+    let credit = getApp().globalData.user.userCredit;
+    that.setData({username: name, credit: credit});
   },
   exitBtnOnClick: function() {
+    wx.request({
+      url: getApp().globalData.url + 'api-user-exit',
+      data: {},
+      method: 'GET', 
+      success: function(res){
+      }
+    })
     wx.redirectTo({
       url: '/pages/index/index'
     })

@@ -188,12 +188,12 @@ page {
     margin-top: -10px;
 }
 
-#left {
+.btn-left {
     float: left;
     margin-left: 40px;
 }
 
-#right {
+.btn-right {
     float: right;
     margin-right: 40px;
 }

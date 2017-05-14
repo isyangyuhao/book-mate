@@ -1,14 +1,14 @@
-// pages/books-list/books-list.js
+// pages/books-search/books-search.js
 Page({
   data:{
       books: {}
     },
   onLoad: function(options) {
-    var classifyOne = options.classifyone;
+    var search = options.search;
     var that = this;
     wx.showNavigationBarLoading();
     wx.request({
-      url: getApp().globalData.url + 'api-book-book-byclassifyone/' + classifyOne,
+      url: getApp().globalData.url + 'api-book-book-bynamelike/' + search,
       data: {},
       method: 'GET',
       success: function(res){

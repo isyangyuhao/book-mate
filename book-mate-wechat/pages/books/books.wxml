@@ -5,7 +5,7 @@
     <view class="search-container">
        <view class="books-search-container">
             <icon type="search" size="18" />
-            <input placeholder="书籍信息" />
+            <input placeholder="书籍信息" bindblur="changeInput"/>
         </view>
         <view class="scan-btn" bindtap="scanBtnOnClick">扫码借书</view>
     </view>
@@ -17,118 +17,12 @@
         <text class="arrow"></text>
     </view>
 
-    <view class="classify" bindtap="booksListBtn">
-        <view class="point" style="background-color:#ef9a9a"></view>
-        <text class="name">文学</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-    <view class="classify">
-        <view class="point" style="background-color:#f48fb1"></view>
-        <text class="name">计算机</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-    <view class="classify">
-        <view class="point" style="background-color:#ce93d8"></view>
-        <text class="name">科学</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-    <view class="classify">
-        <view class="point" style="background-color:#b39ddb"></view>
-        <text class="name">社会</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-    <view class="classify">
-        <view class="point" style="background-color:#9fa8da"></view>
-        <text class="name">物理</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#90caf9"></view>
-        <text class="name">童书</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#81d4fa"></view>
-        <text class="name">艺术</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#80deea"></view>
-        <text class="name">政治</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#80cbc4"></view>
-        <text class="name">医学</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#a5d6a7"></view>
-        <text class="name">经济</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#c5e1a5"></view>
-        <text class="name">大中专教材教辅</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#e6ee9c"></view>
-        <text class="name">小说</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#fff59d"></view>
-        <text class="name">考试</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#ffe082"></view>
-        <text class="name">文化</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#ffcc80"></view>
-        <text class="name">科学与自然</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#ffab91"></view>
-        <text class="name">时尚/美妆</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#bcaaa4"></view>
-        <text class="name">烹饪/美食</text> 
-        <text class="arrow"> > </text>
-
-    </view>
-        <view class="classify">
-        <view class="point" style="background-color:#b0bec5"></view>
-        <text class="name">绘画</text> 
-        <text class="arrow"> > </text>
-    </view>
-
-        <view class="classify">
-        <view class="point" style="background-color:#ef9a9a"></view>
-        <text class="name">书法</text> 
-        <text class="arrow"> > </text>
+    <view wx:for="{{classifyOnes}}" wx:for-index="idx" wx:for-item="classifyOne">
+        <view class="classify" data-name="{{classifyOne}}" bindtap="booksListBtn">
+            <view class="point background-color{{idx%10}}"></view>
+            <text class="name">{{classifyOne}}</text> 
+            <text class="arrow"> > </text>
+        </view>
     </view>
 
 </view>

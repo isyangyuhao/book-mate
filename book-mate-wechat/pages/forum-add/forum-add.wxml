@@ -1,17 +1,17 @@
 <!--pages/forum-add/forum-add.wxml-->
 <view class="main-container">
+    <form bindsubmit="formSubmit">
+        <view class="title-msg">文章标题</view>
 
-    <view class="title-msg">文章标题</view>
+        <input type="text" id="title" placeholder="请输入不超过20字的文章标题" name="title"/>
 
-    <input type="text" id="title" placeholder="请输入不超过20字的文章标题"/>
+        <view class="content-msg">书评内容</view>
 
-    <view class="content-msg">书评内容</view>
+        <textarea id="content" placeholder="请输入10~500字您对本书的看法" name="content"/>
 
-    <textarea id="content" placeholder="请输入10~500字您对本书的看法"/>
-
-    <view class="button">
-        <button id="cancelBtn" bindtap="cancelBtn">取消发布</button>
-        <button id="sendBtn">保存设置</button>
-    </view>
-
+        <view class="button">
+            <button id="cancelBtn" bindtap="cancelBtn">取消发布</button>
+            <button id="sendBtn" formType="submit">发布本文</button>
+        </view>
+    </form>
 </view>

@@ -6,8 +6,8 @@
         <view class="logo">
             <image src="{{userInfo.avatarUrl}}"></image>
         </view>
-        <view class="username">我叫mad</view>
-        <view class="desc">当前信用分数: 81分</view>
+        <view class="username">{{username}}</view>
+        <view class="desc">当前信用分数: {{credit}}分</view>
     </view>
 
     <!--设置选项-->
