@@ -24,7 +24,6 @@ page {
 .point {
     width: 10px;
     height: 10px;
-    background: orange;
     border-radius: 100%;
     margin-top: 5px;
     margin-left: 15px;
@@ -47,6 +46,8 @@ page {
     font-size: 32rpx;
     color: #666;
     padding: 5px 15px;
+    overflow:hidden;
+    height: 150rpx;
 }
 
 .book-row {

@@ -6,11 +6,11 @@
         <image src="http:{{book.bookImageBig}}"></image>
         <view class="right">
             <view class="title">{{book.bookName}}
-                <text wx:if="{{book.bookResidue}}">(暂无)</text>
+                <text wx:if="{{book.bookResidue == 0}}">(暂无)</text>
             </view>
             <view class="author">作者：{{book.bookAuthor}}</view>
             <view class="press">出版社：{{book.bookPress}}</view>
-            <view class="classify1">一级分类：{{book.bookClassifyOne}}</view>
+            <view class="classify1">分类：{{book.bookClassifyOne}}</view>
             <view class="address">地址：{{book.bookAddress}}</view>
             <view class="grade">评分：
                 <view  wx:if="{{book.bookGrade<0.5}}">

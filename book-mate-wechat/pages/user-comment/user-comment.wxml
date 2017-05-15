@@ -1,39 +1,11 @@
 <!--pages/user-comment/user-comment.wxml-->
 <view class="main-container">
 
-    <view class="comment">
-        <view class="delete">删除</view>
-        <view class="title">三十年河东，三十年河西，莫欺少钱穷</view>
-        <view class="content">写的真是太好了</view>
-        <view class="time">2017-5-1</view>
-    </view>
-
-    <view class="comment">
-        <view class="delete">删除</view>
-        <view class="title">三十年河东，三十年河西，莫欺少钱穷</view>
-        <view class="content">写的真是太好了</view>
-        <view class="time">2017-5-1</view>
-    </view>
-
-    <view class="comment">
-        <view class="delete">删除</view>
-        <view class="title">三十年河东，三十年河西，莫欺少钱穷</view>
-        <view class="content">写的真是太好了</view>
-        <view class="time">2017-5-1</view>
-    </view>
-
-    <view class="comment">
-        <view class="delete">删除</view>
-        <view class="title">三十年河东，三十年河西，莫欺少钱穷</view>
-        <view class="content">写的真是太好了</view>
-        <view class="time">2017-5-1</view>
-    </view>
-
-    <view class="comment">
-        <view class="delete">删除</view>
-        <view class="title">三十年河东，三十年河西，莫欺少钱穷</view>
-        <view class="content">写的真是太好了</view>
-        <view class="time">2017-5-1</view>
+    <view class="comment" wx:for="{{comments}}" wx:for-item="comment">
+        <view class="delete" catchtap="deleteBtn" id="{{comment.forumCommentId}}">删除</view>
+        <view class="title">{{comment.forum.forumTitle}}</view>
+        <view class="content">{{comment.forumCommentContent}}</view>
+        <view class="time">{{comment.forumCommentTime}}</view>
     </view>
 
 </view>

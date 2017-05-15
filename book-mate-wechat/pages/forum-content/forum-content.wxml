@@ -1,61 +1,26 @@
 <!--pages/forum-content/forum-content.wxml-->
 <view class="main-container">
 
-    <view class="title">三十年河东,三十年河西,莫欺少年穷</view>
+    <view class="title">{{forumMsg.forum.forumTitle}}</view>
 
-    <view class="desc">作者: 我叫mad; 时间: 2017-5-1</view>
+    <view class="desc">作者: {{forumMsg.forum.user.userUsername}}; 时间: {{forumMsg.forum.forumTime}}</view>
 
-    <view class="content">正当萧炎释放出的毁灭火莲即将摧毁内院之时，一直隐匿内院的千百二老现身解决了这次危难，并将地魔老鬼击杀，而韩枫却不知所踪。在天焚塔底苦修之时，突然传来韩枫的消息，萧炎立即出关广邀豪杰与韩枫组织的联盟决战于魔炎谷，一举荡平黑角域所有黑暗势力。突破六星斗皇后，萧炎一行终于踏上了前往中州的路途，却在空间虫洞中遭遇空间风暴，唯有萧炎一人被随机抛到了中州北域的大漠中，为韩家车队所救。为了答谢韩家，萧炎答应代替韩家同与韩家势不两立的洪家少爷决斗，大战一触即发……</view>
+    <view class="content">{{forumMsg.forum.forumContent}}</view>
 
     <view class="comment-title"> 近期书评</view>
 
-    <view class="comment">
-        <view class="comment-desc">
-            <view class="point" style="background-color:#ef9a9a"></view>
-            <view class="name">我叫mad</view>
-            <view class="time">2017-5-1</view>
-        </view>
-        <view class="comment-value">这篇文章写得很好！形象生动的表现了趋炎附势世态炎凉的小市民形象；深刻的抨击了当时封建社会底层人民麻木的思想。
-        </view>
+    <view wx:if="{{forumMsg.forumComments.length == 0}}" style="font-size: 32rpx; color: #666;">
+        暂无书评,赶快写个吧!
     </view>
 
-    <view class="comment">
+    <view class="comment" wx:for="{{forumMsg.forumComments}}" wx:for-index="idx" wx:for-item="comment">
         <view class="comment-desc">
-            <view class="point" style="background-color:#b39ddb"></view>
-            <view class="name">我叫mad</view>
-            <view class="time">2017-5-1</view>
+            <view class="point background-color{{idx%10}}"></view>
+            <view class="name">{{comment.user.userUsername}}</view>
+            <view class="time">{{comment.forumCommentTime}}</view>
         </view>
-        <view class="comment-value">这篇文章写得很好！形象生动的表现了趋炎附势世态炎凉的小市民形象；深刻的抨击了当时封建社会底层人民麻木的思想。
-        </view>
-    </view>
-
-    <view class="comment">
-        <view class="comment-desc">
-            <view class="point" style="background-color:#81d4fa"></view>
-            <view class="name">我叫mad</view>
-            <view class="time">2017-5-1</view>
-        </view>
-        <view class="comment-value">这篇文章写得很好！形象生动的表现了趋炎附势世态炎凉的小市民形象；深刻的抨击了当时封建社会底层人民麻木的思想。
-        </view>
-    </view>
-
-    <view class="comment">
-        <view class="comment-desc">
-            <view class="point" style="background-color:#80cbc4"></view>
-            <view class="name">我叫mad</view>
-            <view class="time">2017-5-1</view>
-        </view>
-        <view class="comment-value">这篇文章写得很好！形象生动的表现了趋炎附势世态炎凉的小市民形象；深刻的抨击了当时封建社会底层人民麻木的思想。
-        </view>
-    </view>
-
-    <view class="comment">
-        <view class="comment-desc">
-            <view class="point" style="background-color:#e6ee9c"></view>
-            <view class="name">我叫mad</view>
-            <view class="time">2017-5-1</view>
-        </view>
-        <view class="comment-value">这篇文章写得很好！形象生动的表现了趋炎附势世态炎凉的小市民形象；深刻的抨击了当时封建社会底层人民麻木的思想。
+        <view class="comment-value">
+            {{comment.forumCommentContent}}
         </view>
     </view>
 
@@ -64,5 +29,5 @@
 <view style="width:100%; height:39px;"></view>
 
 <view class="comment-action">
-    <input type="text" placeholder="请输入您的评论..." id="contentInput"/>
+    <input type="text" placeholder="请输入您的评论..." id="contentInput" bindblur="changeInput" />
 </view>

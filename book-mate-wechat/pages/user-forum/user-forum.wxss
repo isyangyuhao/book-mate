@@ -24,6 +24,8 @@ page {
     font-size: 32rpx;
     color: #666;
     padding: 5px 15px;
+    overflow:hidden;
+    height: 150rpx;
 }
 
 .book-row {
