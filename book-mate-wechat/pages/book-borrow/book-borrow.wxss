@@ -1,0 +1,26 @@
+/* pages/book-borrow/book-borrow.wxss */
+
+.main-container {
+    width: 100%;
+    float: left;
+}
+
+.title {
+    font-size: 36rpx;
+    color: #333;
+    margin-top: 100rpx;
+    text-align: center;
+}
+
+progress {
+    width: 80%;
+    padding-top: 200px;
+    margin: 0 auto;
+}
+
+image {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    display: block;
+}

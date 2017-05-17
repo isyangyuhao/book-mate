@@ -1,0 +1,15 @@
+<!--pages/book-borrow/book-borrow.wxml-->
+<view class="main-conainer">
+
+    <view class="title">{{title}}</view>
+
+    <progress 
+        percent="100"
+        stroke-width="5"
+        color="#4db6ac"
+        active="true"
+        wx:if="{{progress}}"/>
+
+    <image src="https://bookmate.natapp4.cc/bookMateServer/borrowCodeImage/1.jpg" wx:if="{{codeShow}}"></image>
+
+</view>

@@ -10,13 +10,13 @@ Page({
     }
   },
   formSubmit: (e) => {
-    console.log('loginMsg: ', e.detail.value);
     wx.request({
       url: getApp().globalData.url + 'api-user-login',
       data: { username: e.detail.value.username, password: e.detail.value.password },
       method: 'GET',
       success: function (res) {
-        if (res.data != "") {
+        if (res.data.userId != null) {
+          console.log(res.data);
           //登录成功
           //微信端登录
           var app = getApp();

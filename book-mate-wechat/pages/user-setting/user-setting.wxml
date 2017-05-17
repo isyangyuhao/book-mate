@@ -1,40 +1,40 @@
 <!--pages/user-setting/user-setting.wxml-->
 <view class="main-container">
+    <form bindsubmit="formSubmit">
+        <view class="usernameSetting">
+            <text>用户名</text>
+            <input type="text" value="{{user.userUsername}}" name="username"/>
+        </view>
 
-    <view class="usernameSetting">
-        <text>用户名</text>
-        <input type="text" value="我叫mad"/>
-    </view>
+        <view class="usernameSetting">
+            <text>密码</text>
+            <input type="password" value="{{user.userPassword}}" name="password"/>
+        </view>
 
-    <view class="usernameSetting">
-        <text>密码</text>
-        <input type="password" value="root"/>
-    </view>
+        <checkbox-group class="group" bindchange="checkboxMessage" class="checkboxSetting" name="messageStatus">
+            <label class="" for="message"><text>消息推送</text></label>
+            <checkbox value="message" checked="{{user.userMessageStatus}}" />
+        </checkbox-group>
 
-    <checkbox-group class="group" bindchange="checkboxMessage" class="checkboxSetting">
-        <label class="" for="message"><text>消息推送</text></label>
-        <checkbox value="message" checked="true"/>
-    </checkbox-group>
+        <checkbox-group class="group" bindchange="checkboxNew" class="checkboxSetting" name="newStatus">
+            <label class="" for="new"><text>新书推荐</text></label>
+            <checkbox value="new" checked="{{user.userNewStatus}}" />
+        </checkbox-group>
 
-    <checkbox-group class="group" bindchange="checkboxNew" class="checkboxSetting">
-        <label class="" for="new"><text>新书推荐</text></label>
-        <checkbox value="new"  checked="true"/>
-    </checkbox-group>
+        <checkbox-group class="group" bindchange="checkboxForum" class="checkboxSetting" name="forumStatus">
+            <label class="" for="forum"><text>书友推荐</text></label>
+            <checkbox value="forum"  checked="{{user.userForumStatus}}"/>
+        </checkbox-group>
 
-    <checkbox-group class="group" bindchange="checkboxForum" class="checkboxSetting">
-        <label class="" for="forum"><text>书友推荐</text></label>
-        <checkbox value="forum"  checked="true"/>
-    </checkbox-group>
+        <checkbox-group class="group" bindchange="checkboxRecommend" class="checkboxSetting" >
+            <label class="" for="recommend"><text>个人推荐数量: {{recommendMsg}}</text></label>
+        </checkbox-group>
 
-    <checkbox-group class="group" bindchange="checkboxRecommend" class="checkboxSetting">
-        <label class="" for="recommend"><text>个人推荐数量: {{recommendMsg}}</text></label>
-    </checkbox-group>
+        <slider bindchange="sliderChange" step="30" value="{{user.userRecommendStatus}}" max="90" activeColor="#4db6ac" name="recommendStatus"/>
 
-    <slider bindchange="sliderChange" step="30" value="60" max="90" activeColor="#4db6ac"/>
-
-    <view class="button">
-        <button id="cancelBtn" bindtap="cancelBtn">取消</button>
-        <button id="saveBtn">保存</button>
-    </view>
-
+        <view class="button">
+            <button id="cancelBtn" bindtap="cancelBtn">取消</button>
+            <button id="saveBtn" formType="submit">保存</button>
+        </view>
+    </form>
 </view>

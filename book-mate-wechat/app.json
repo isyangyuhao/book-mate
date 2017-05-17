@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/book-borrow/book-borrow",
     "pages/index/index",
     "pages/login/login",
     "pages/register/register",
