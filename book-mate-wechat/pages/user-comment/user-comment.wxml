@@ -8,4 +8,6 @@
         <view class="time">{{comment.forumCommentTime}}</view>
     </view>
 
+    <view wx:if="{{comments == 0}}" style="color:#666; font-size:32rpx; text-align:center; margin-top:100px;">暂无评论</view>
+
 </view>

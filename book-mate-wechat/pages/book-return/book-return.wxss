@@ -1,4 +1,4 @@
-/* pages/book-borrow/book-borrow.wxss */
+/* pages/book-return/book-return.wxss */
 
 .main-container {
     width: 100%;

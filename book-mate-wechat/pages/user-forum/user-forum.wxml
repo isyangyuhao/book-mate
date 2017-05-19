@@ -18,4 +18,6 @@
         <view class="comment-row">{{forumAndComment.forum.forumTime}}, {{forumAndComment.commentNumber}}评论</view>
     </view>
 
+    <view wx:if="{{forumAndComments == 0}}" style="color:#666; font-size:32rpx; text-align:center; margin-top:100px;">暂无发帖</view>
+
 </view>

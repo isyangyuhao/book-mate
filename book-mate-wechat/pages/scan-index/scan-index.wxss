@@ -1,5 +1,4 @@
-/**index.wxss**/
-
+/* pages/scan-index/scan-index.wxss */
 page {
   width: 100%;
 }
@@ -32,33 +31,19 @@ page {
 }
 
 .loginBtn {
-  background-color: #4db6ac;
+  background-color: #7986cb;
   margin-top: 500rpx;
   color: #fff;
   line-height: 80rpx;
-  border: 1px solid #4db6ac;
+  border: 1px solid #7986cb;
   border-radius: 5px;
 }
 
-.registerBtn {
+.returnBtn {
   background-color: #eeeeee;
   margin-top: 50rpx;
-  color: #4db6ac;
+  color: #7986cb;
   line-height: 80rpx;
-  border: 1px solid #4db6ac;  
+  border: 1px solid #7986cb;  
   border-radius: 5px;
-}
-
-.codeBtn {
-  font-size: 12px;
-  color: #ccc;
-  width: 40px;
-  height: 18px;
-  line-height: 20px;
-  border: 1px solid #ccc;
-  text-align: center;
-  border-radius: 5rpx;
-  position: fixed;
-  top: 10px;
-  right: 10px;
 }

@@ -9,11 +9,11 @@ page {
 
 .card {
     width: 100%;
-    height: 450rpx;
+    height: 220px;
     background: #fff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-    font-size: 32rpx;
-    line-height: 2em;
+    font-size: 14px;
+    line-height: 28px;
     float: left;
     margin-bottom: 10px;
 }
@@ -23,15 +23,18 @@ page {
 }
 
 .card .btn {
-    width: 400rpx;
-    height: 60rpx;
+    /*width: 400rpx;
+    height: 60rpx;*/
+    width: 240px;
+    height: 30px;
     background: #fff;
     color: #4db6ac;
     text-align: center;
-    line-height: 60rpx;
+    line-height: 30px;
     border-radius: 5px;
     margin: 0 auto;
-    font-size: 28rpx;
-    margin-top: 45rpx;
+    font-size: 14px;
+    margin-top: 20px;
     border: 1px solid #4db6ac;
+    margin-bottom: 0;
 }

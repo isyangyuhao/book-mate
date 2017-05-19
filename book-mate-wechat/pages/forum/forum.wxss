@@ -47,7 +47,7 @@ page {
     color: #666;
     padding: 5px 15px;
     overflow:hidden;
-    height: 150rpx;
+    height: 154rpx;
 }
 
 .book-row {

@@ -1,0 +1,16 @@
+<!--pages/scan-admin/scan-admin.wxml-->
+<view class="">
+
+  <view class="title">工作证</view>
+
+  <image src="https://bookmate.natapp4.cc/bookMateServer/adminPhoto/{{admin.adminUsername}}.png" class="photo"></image>
+
+  <view class="name">{{admin.adminUsername}}</view>
+
+  <view class="hr"></view>
+
+  <view class="desc" style="margin-top:50px;">管理员编号：{{admin.adminId}}</view>
+  <view class="desc">负责职能：{{admin.adminWork}}</view>
+  <view class="desc">联系邮箱：{{admin.adminEmail}}</view>
+
+</view>

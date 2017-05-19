@@ -1,46 +1,50 @@
 <!--pages/user-history/user-history.wxml-->
 <view class="main-container">
 
-    <view class="card">
+    <view class="card" wx:for="{{history}}" wx:for-item="h" style="margin-bottom: 10px;">
         <view style="margin-top:10px;"></view>
-        <view>借阅图书：《决胜移动金融》</view>
-        <view>借阅时间：2017-05-01 12:00</view>
-        <view>还书时间：2017-06-01 12:00</view>
+        <view>借阅图书：《{{h.book.bookName}}》</view>
+        <view>借阅时间：{{h.borrowStartTime}} | 还书时间：{{h.borrowEndTime}}</view>
+        <view class="grade">借阅评分：
+                <view wx:if="{{h.borrowGrade == 1}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view wx:if="{{h.borrowGrade == 2}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view wx:if="{{h.borrowGrade == 3}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view wx:if="{{h.borrowGrade == 4}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view wx:if="{{h.borrowGrade == 5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                </view>
+        </view>
     </view>
 
-    <view class="card">
-        <view style="margin-top:10px;"></view>
-        <view>借阅图书：《决胜移动金融》</view>
-        <view>借阅时间：2017-05-01 12:00</view>
-        <view>还书时间：2017-06-01 12:00</view>
-    </view>
+        <view wx:if="{{history == 0}}" style="color:#666; font-size:32rpx; text-align:center; margin-top:100px;">暂无借阅历史</view>
 
-    <view class="card">
-        <view style="margin-top:10px;"></view>
-        <view>借阅图书：《决胜移动金融》</view>
-        <view>借阅时间：2017-05-01 12:00</view>
-        <view>还书时间：2017-06-01 12:00</view>
-    </view>
-
-    <view class="card">
-        <view style="margin-top:10px;"></view>
-        <view>借阅图书：《决胜移动金融》</view>
-        <view>借阅时间：2017-05-01 12:00</view>
-        <view>还书时间：2017-06-01 12:00</view>
-    </view>
-
-    <view class="card">
-        <view style="margin-top:10px;"></view>
-        <view>借阅图书：《决胜移动金融》</view>
-        <view>借阅时间：2017-05-01 12:00</view>
-        <view>还书时间：2017-06-01 12:00</view>
-    </view>
-
-    <view class="card">
-        <view style="margin-top:10px;"></view>
-        <view>借阅图书：《决胜移动金融》</view>
-        <view>借阅时间：2017-05-01 12:00</view>
-        <view>还书时间：2017-06-01 12:00</view>
-    </view>
 
 </view>

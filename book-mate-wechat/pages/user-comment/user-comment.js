@@ -1,7 +1,7 @@
 // pages/user-comment/user-comment.js
 Page({
   data: {
-    comments: {}
+    comments: 0
   },
   onLoad: function (options) {
     var that = this;

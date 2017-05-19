@@ -1,0 +1,11 @@
+<!--pages/scan-index/scan-index.wxml-->
+<view class="container" >
+  <view class="logo">
+    <image class="logo-icon" src="/images/index/index-logo2.png" background-size="cover"></image>
+    <text class="logo-title">"无微不至"的借阅伴侣扫码端</text>
+  </view>
+  <view class="button">
+    <view class="loginBtn" bindtap="loginBtnOnClick">管理员登录</view>
+    <view class="returnBtn" bindtap="returnIndexBtn">返回客户端</view>
+  </view>
+</view>

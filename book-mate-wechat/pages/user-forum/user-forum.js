@@ -1,7 +1,7 @@
 // pages/user-forum/user-forum.js
 Page({
   data: {
-    forumAndComments: {}
+    forumAndComments: 0
   },
   onLoad: function () {
     var userId = getApp().globalData.user.userId;

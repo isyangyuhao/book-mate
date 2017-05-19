@@ -1,0 +1,17 @@
+<!--pages/book-grade/book-grade.wxml-->
+<view class="main-container">
+
+  <view class="title">还书成功,赶紧评个分吧！</view>
+
+
+  <view class="star-container">
+      <image src="{{star[0]}}" bindtap="onClick" id="1"></image>
+      <image src="{{star[1]}}" bindtap="onClick" id="2"></image>
+      <image src="{{star[2]}}" bindtap="onClick" id="3"></image>
+      <image src="{{star[3]}}" bindtap="onClick" id="4"></image>
+      <image src="{{star[4]}}" bindtap="onClick" id="5"></image>
+  </view>
+
+  <button class="submitBtn" bindtap="submitGrade">提交</button>
+
+</view>

@@ -1,0 +1,6 @@
+<!--pages/scan-main/scan-main.wxml-->
+<button class="btn" formType="submit" style="margin-top:250rpx;" bindtap="adminBtn">管理员工作证</button>
+<button class="btn" formType="submit" bindtap="scanBorrowBtn">扫描借书码</button>
+<button class="btn" formType="submit" bindtap="scanReturnBtn">扫描还书码</button>
+<button class="btn" formType="submit" bindtap="scanAutoBtn">速借速还</button>
+<button class="btn exitBtn" formType="submit" bindtap="exitBtn">退出</button>

@@ -1,0 +1,18 @@
+<!--pages/scan-login/scan-login.wxml-->
+<view class="container">
+    <text class="errorMsg" wx:if="{{errorStatus}}">管理员名或密码输入有误</text>
+    <view class="formContainer">
+        <form bindsubmit="formSubmit">
+            <view class="usernameContainer">
+                <image src="/images/login/login-user.png"></image>
+                <input type="text" name="username" placeholder="管理员名" />
+            </view>
+            <view class="passwordContainer">
+                <image src="/images/login/login-password.png"></image>
+                <input type="password" name="password" placeholder="密码" />
+            </view>
+            <button class="loginBtn" formType="submit">管理员登录</button>
+            <text class="navBtn" bindtap="returnIndexBtn">返回</text>
+        </form>
+    </view>
+</view>

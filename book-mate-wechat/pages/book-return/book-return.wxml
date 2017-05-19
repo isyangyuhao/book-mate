@@ -1,4 +1,4 @@
-<!--pages/book-borrow/book-borrow.wxml-->
+<!--pages/book-return/book-return.wxml-->
 <view class="main-conainer">
 
     <view class="title">{{title}}</view>
@@ -10,10 +10,10 @@
         active="true"
         wx:if="{{progress}}"/>
 
-    <image src="http://qr.liantu.com/api.php?text=book-mate-borrow-id:{{borrowId}}"
+    <image src="http://qr.liantu.com/api.php?text=book-mate-return-id:{{borrowId}}"
      wx:if="{{codeShow && borrowId != -1 && credit < 90}}"></image>
 
-    <image src="http://qr.liantu.com/api.php?text=book-mate-borrow2-id:{{borrowId}}&fg=e57373"
+    <image src="http://qr.liantu.com/api.php?text=book-mate-return2-id:{{borrowId}}&fg=e57373"
      wx:if="{{codeShow && borrowId != -1 && credit >= 90}}"></image>
 
      <view wx:if="{{borrowId == -1}}" class="error">{{errorMsg}}</view>

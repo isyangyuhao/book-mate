@@ -27,6 +27,7 @@ App({
   globalData: {
     userInfo: null,
     url: "https://bookmate.natapp4.cc/bookMateServer/",
-    user: ""
+    user: "",
+    admin: ""
   }
 })

@@ -1,0 +1,26 @@
+/* pages/scan-main/scan-main.wxss */
+
+button::after {
+    border: 0;
+}
+
+.btn {
+    width: 90%;
+    height: 80rpx;
+    background-color: #7986cb;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 32rpx;
+    margin-top: 75rpx;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #7986cb;
+}
+
+.exitBtn {
+  background: #fff;
+  border: 1px solid #7986cb;
+  color: #7986cb;
+}

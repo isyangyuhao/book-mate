@@ -1,7 +1,12 @@
 {
   "pages":[
-    "pages/book-borrow/book-borrow",
     "pages/index/index",
+    "pages/scan-index/scan-index",
+    "pages/scan-login/scan-login",
+    "pages/scan-main/scan-main",
+    "pages/scan-admin/scan-admin",
+    "pages/book-return/book-return",
+    "pages/book-grade/book-grade",
     "pages/login/login",
     "pages/register/register",
     "pages/main/main",
@@ -17,7 +22,8 @@
     "pages/user-forum/user-forum",
     "pages/user-comment/user-comment",
     "pages/user-setting/user-setting",
-    "pages/user-borrow/user-borrow"
+    "pages/user-borrow/user-borrow",
+    "pages/book-borrow/book-borrow"
   ],
   "window":{
     "backgroundTextStyle":"light",
