@@ -25,7 +25,7 @@ Page({
     var that = this;
     setTimeout(function() {
       that.setData({codeShow: true, progress: false, title: "请向管理员出示下方的借书码", 
-        errorMsg: "借书错误！请检查是否该书已被借阅或已超出借书上限制"});
+        errorMsg: "借书错误！请检查该书是否已被借阅或已超出借书上限"});
         var timer = setInterval(function() {
           wx.request({
             url: getApp().globalData.url + 'api-scan-borrow-byid/' + that.data.borrowId,

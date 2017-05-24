@@ -3,10 +3,13 @@
 
     <view class="card" wx:for="{{borrowList}}" wx:for-item="borrow">
         <view style="margin-top:10px;"></view>
-        <view>借阅图书：《{{borrow.book.bookName}}》</view>
+        <view wx:if="{{borrow.borrowStatus == 1}}">借阅图书：《{{borrow.book.bookName}}》</view>
+        <view wx:if="{{borrow.borrowStatus == 3}}" style="color: #ef5350">借阅图书：《{{borrow.book.bookName}}》(已逾期)</view>
         <view>所属类别：{{borrow.book.bookClassifyOne}}</view>
         <view>借阅时间：{{borrow.borrowStartTime}}</view>
-        <view>应还时间：{{borrow.borrowShouldTime}}</view>
+        <view>
+          应还时间：{{borrow.borrowShouldTime}}
+        </view>
         <view class="btn" id="{{borrow.book.bookId}}" bindtap="returnBookBtn">我要还书</view>
     </view>
 

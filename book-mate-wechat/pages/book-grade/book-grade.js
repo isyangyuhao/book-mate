@@ -23,6 +23,12 @@ Page({
   },
   submitGrade: function() {
     var that = this;
+    var credit = getApp().globalData.user.userCredit;
+    if (credit <= 98) {
+      getApp().globalData.user.userCredit += 2;
+    } else {
+      getApp().globalData.user.userCredit = 100;
+    }
     wx.request({
       url: getApp().globalData.url + 'api-scan-grade-book/' + that.data.borrowId +  '/' + that.data.grade,
       data: {},

@@ -18,6 +18,14 @@ Page({
         that.setData({ book: res.data });
       }
     })
+    wx.request({
+      url: getApp().globalData.url + "api-record-browse/" + getApp().globalData.user.userId + "/" + bookId,
+      data: {},
+      method: 'GET',
+      success: function (res) {
+        
+      }
+    })
   },
   addForumBtn: function () {
     wx.navigateTo({

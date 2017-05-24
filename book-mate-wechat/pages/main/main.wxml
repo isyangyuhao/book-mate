@@ -9,6 +9,12 @@
         <view class="btn">查看详情</view>
     </view>
 
+    <view class="msg-card" style="height: 120px;">
+        <view class="tag">通知</view>
+        <view class="title">—— 温情提示 ——</view>
+        <view class="content">信用分数达到90分后，不仅可以提升借书上限到5本，还会开启速借速还和信息流推送等功能，赶快借书吧！</view>
+    </view>
+
     <!--热门卡片-->
     <view class="hot-card" bindtap="bookDetailBtn">
         <image              src="http://img12.360buyimg.com/n1/jfs/t2677/135/3791707350/51300/3a452204/57996272N5c135ec4.jpg"/>

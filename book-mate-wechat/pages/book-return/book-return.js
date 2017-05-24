@@ -42,9 +42,9 @@ Page({
                 duration: 2000
               })
               setTimeout(function () {
-                wx.navigateBack({
-                  delta: 2
-                })
+                // wx.navigateBack({
+                //   delta: 2
+                // })
                 wx.redirectTo({
                   url: '/pages/book-grade/book-grade?id=' + that.data.borrowId,
                 })

@@ -23,7 +23,7 @@ Page({
           app.getUserInfo();
           getApp().globalData.user = res.data;
           wx.switchTab({
-            url: '/pages/main/main'
+            url: '/pages/books/books'
           })
         } else {
           //登录失败

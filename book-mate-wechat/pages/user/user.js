@@ -6,6 +6,9 @@ Page({
     credit: 80
   },
   onLoad: function (options) {
+    if (getApp().globalData.user.userCredit >= 90) {
+      wx.setNavigationBarTitle({ title: '借阅伴侣+' });
+    }
     var that = this;
     wx.getUserInfo({
       success: function (res) {

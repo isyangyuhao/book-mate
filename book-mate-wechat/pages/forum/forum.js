@@ -10,6 +10,9 @@ Page({
     })
   },
   onLoad: function () {
+    if (getApp().globalData.user.userCredit >= 90) {
+      wx.setNavigationBarTitle({ title: '借阅伴侣+' });
+    }
     var that = this;
     wx.request({
       url: getApp().globalData.url + "api-forum-all",

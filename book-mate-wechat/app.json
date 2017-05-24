@@ -35,7 +35,7 @@
         "list": [
             {
                 "pagePath": "pages/main/main",
-                "text": "推荐",
+                "text": "信息",
                 "iconPath": "images/tabBar/main_0.png",
                 "selectedIconPath": "images/tabBar/main_1.png"
             },
