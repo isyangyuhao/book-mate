@@ -6,6 +6,33 @@ page {
 
 /* 用户信息样式 */
 
+#borrowNumber {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+}
+#point1 {
+  width: 18px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  margin-right: 5px;
+  justify-content: flex-end;
+  background: #eee;
+}
+#point2 {
+  width: 18px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  margin-right: 5px;
+  justify-content: flex-end;
+  background: #a5d6a7;
+}
+
 .user-container {
     width: 100%;
     height: 200px;

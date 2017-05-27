@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/main/main",
     "pages/scan-index/scan-index",
     "pages/scan-login/scan-login",
     "pages/scan-main/scan-main",
@@ -9,7 +10,6 @@
     "pages/book-grade/book-grade",
     "pages/login/login",
     "pages/register/register",
-    "pages/main/main",
     "pages/books/books",
     "pages/books-search/books-search",
     "pages/forum/forum",

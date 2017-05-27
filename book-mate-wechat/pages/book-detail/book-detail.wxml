@@ -75,14 +75,14 @@
     <view class="recommended-container">
         <text class="title">喜欢本书的人还可能喜欢</text>
         <view class="book">
-            <image src="http://img11.360buyimg.com/n1/jfs/t2701/277/3744345907/413293/e9df7873/57987009N6984fd3a.jpg"></image>
-            <image src="http://img12.360buyimg.com/n1/jfs/t3847/312/798218462/179259/e623cdc4/581b09d0Nf05502d1.jpg"></image>
-            <image src="http://img14.360buyimg.com/n1/jfs/t3565/301/1040177650/131851/1a3725da/581b09d0N0a27450c.jpg"></image>
+            <image src="http:{{bookRecommend[0].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[0].bookId}}"></image>
+            <image src="http:{{bookRecommend[1].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[1].bookId}}"></image>
+            <image src="http:{{bookRecommend[2].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[2].bookId}}"></image>
         </view>
         <view class="book">
-            <image src="http:////img10.360buyimg.com/n1/jfs/t3217/155/2907738309/426904/cfa8df7/57e89481N8ffe1814.jpg"></image>
-            <image src="http://img12.360buyimg.com/n1/jfs/t3244/83/1796723197/569130/27ffbee7/57d40642N96a4fbed.jpg"></image>
-            <image src="http://img12.360buyimg.com/n1/jfs/t3607/232/904294206/121426/3291b78c/5817efd8N20e3ab6d.jpg"></image>
+            <image src="http:{{bookRecommend[3].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[3].bookId}}"></image>
+            <image src="http:{{bookRecommend[4].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[4].bookId}}"></image>
+            <image src="http:{{bookRecommend[5].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[5].bookId}}"></image>
         </view>
     </view>
 

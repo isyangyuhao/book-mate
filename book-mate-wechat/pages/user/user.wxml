@@ -8,6 +8,18 @@
         </view>
         <view class="username">{{username}}</view>
         <view class="desc">当前信用分数: {{credit}}分</view>
+        <!--<view id="borrowNumber" wx:if="{{credit >= 90}}">
+          <view id="point1"></view>
+          <view id="point1"></view>
+          <view id="point1"></view>
+          <view id="point1"></view>
+          <view id="point1"></view>
+        </view>
+        <view id="borrowNumber" wx:if="{{credit < 90}}">
+          <view id="point1"></view>
+          <view id="point1"></view>
+        </view>-->
+        
     </view>
 
     <!--设置选项-->

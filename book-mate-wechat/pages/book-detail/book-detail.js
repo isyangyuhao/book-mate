@@ -2,7 +2,8 @@
 Page({
   data: {
     scanCode: 0,
-    book: {}
+    book: {},
+    bookRecommend: {}
   },
   onLoad: function (options) {
     var that = this;
@@ -26,6 +27,14 @@ Page({
         
       }
     })
+    wx.request({
+      url: getApp().globalData.url + "api-book-recommend/" + bookId,
+      data: {},
+      method: 'GET',
+      success: function (res) {
+        that.setData({ bookRecommend: res.data });
+      }
+    })
   },
   addForumBtn: function () {
     wx.navigateTo({
@@ -47,6 +56,12 @@ Page({
 
         }
       }
+    })
+  },
+  bookDetailBtn: function (event) {
+    var bookId = event.currentTarget.id;
+    wx.redirectTo({
+      url: '/pages/book-detail/book-detail?id=' + bookId,
     })
   }
 })
