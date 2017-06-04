@@ -34,17 +34,29 @@ Page({
       url: '/pages/book-detail/book-detail?scanCode=0&id=' + bookId
     })
   },
-  deleteBtn: function(e) {
+  deleteBtn: function (e) {
     var forumId = e.currentTarget.id;
-    wx.request({
-      url: getApp().globalData.url + "api-forum-remove-forum/" + forumId,
-      data: {},
-      method: 'GET', 
-      success: function(res){
-        wx.redirectTo({
-          url: '/pages/user-forum/user-forum'
-        })
+    wx.showModal({
+      title: '提示',
+      content: '确认删除吗?',
+      confirmColor: '#4db6ac',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: getApp().globalData.url + "api-forum-remove-forum/" + forumId,
+            data: {},
+            method: 'GET',
+            success: function (res) {
+              wx.redirectTo({
+                url: '/pages/user-forum/user-forum'
+              })
+            }
+          })
+        } else if (res.cancel) {
+
+        }
       }
     })
+
   }
 })

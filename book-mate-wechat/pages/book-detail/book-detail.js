@@ -24,7 +24,7 @@ Page({
       data: {},
       method: 'GET',
       success: function (res) {
-        
+
       }
     })
     wx.request({
@@ -62,6 +62,36 @@ Page({
     var bookId = event.currentTarget.id;
     wx.redirectTo({
       url: '/pages/book-detail/book-detail?id=' + bookId,
+    })
+  },
+  reserveBtn: function (event) {
+    var bookId = event.currentTarget.id;
+    var userId = getApp().globalData.user.userId;
+    wx.showModal({
+      title: '提示',
+      content: '请问您确定预订本书吗?',
+      confirmColor: '#4db6ac',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: getApp().globalData.url + "api-scan-reserve-book/" + bookId + "/" + userId,
+            data: {},
+            method: 'GET',
+            success: function (res) {
+              if (res.data == 1) {
+                wx.showToast({
+                  title: '预订成功!',
+                })
+                wx.redirectTo({
+                  url: '/pages/user-borrow/user-borrow',
+                })
+              }
+            }
+          })
+        } else if (res.cancel) {
+
+        }
+      }
     })
   }
 })

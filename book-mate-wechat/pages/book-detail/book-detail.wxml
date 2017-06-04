@@ -90,7 +90,7 @@
     <view class="operate-container">
         <text class="title">您可以执行的操作</text>
         <view class="btn btn-left"  wx:if="{{scanCode == 1}}" bindtap="borrowBtn" id="{{book.bookId}}">借阅本书</view>
-        <view class="disable-btn btn-left"  wx:if="{{scanCode == 0}}">扫码借阅</view>
+        <view class="disable-btn btn-left"  wx:if="{{scanCode == 0}}" bindtap="reserveBtn" id="{{book.bookId}}">预订本书</view>
         <view class="btn btn-right" id="{{book.bookId}}" bindtap="addForumBtn">写文推荐</view>
     </view>
 

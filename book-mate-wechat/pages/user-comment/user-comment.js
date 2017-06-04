@@ -23,14 +23,25 @@ Page({
   },
   deleteBtn: function(e) {
     var commentId = e.currentTarget.id;
-    wx.request({
-      url: getApp().globalData.url + "api-forum-remove-comment/" + commentId,
-      data: {},
-      method: 'GET', 
-      success: function(res){
-        wx.redirectTo({
-          url: '/pages/user-comment/user-comment'
-        })
+    wx.showModal({
+      title: '提示',
+      content: '确认删除吗?',
+      confirmColor: '#4db6ac',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: getApp().globalData.url + "api-forum-remove-comment/" + commentId,
+            data: {},
+            method: 'GET',
+            success: function (res) {
+              wx.redirectTo({
+                url: '/pages/user-comment/user-comment'
+              })
+            }
+          })
+        } else if (res.cancel) {
+
+        }
       }
     })
   }

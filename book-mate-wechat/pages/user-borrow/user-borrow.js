@@ -34,5 +34,58 @@ Page({
      wx.navigateTo({
        url: '/pages/book-return/book-return?id=' + bookId,
      })
+  },
+  removeReserveBookBtn: function(e) {
+    var bookId = e.currentTarget.id;
+    var userId = getApp().globalData.user.userId;
+    wx.showModal({
+      title: '提示',
+      content: '请问您确定取消预订本书吗?',
+      confirmColor: '#4db6ac',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: getApp().globalData.url + "api-book-remove-reserve/" + bookId + "/" + userId,
+            data: {},
+            method: 'GET',
+            success: function (res) {
+              wx.showToast({
+                title: '取消预订成功!',
+              })
+              wx.redirectTo({
+                url: '/pages/user-borrow/user-borrow',
+              })
+            }
+          })
+        } else if (res.cancel) {
+
+        }
+      }
+    })
+  },
+  borrowReserveBookBtn: function(e) {
+    var bookId = e.currentTarget.id;
+    var userId = getApp().globalData.user.userId;
+    wx.showModal({
+      title: '提示',
+      content: '请问您确定借阅本书吗?',
+      confirmColor: '#4db6ac',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: getApp().globalData.url + "api-book-remove-reserve/" + bookId + "/" + userId,
+            data: {},
+            method: 'GET',
+            success: function (res) {
+              wx.navigateTo({
+                url: '/pages/book-borrow/book-borrow?id=' + bookId,
+              })
+            }
+          })
+        } else if (res.cancel) {
+
+        }
+      }
+    })
   }
 })

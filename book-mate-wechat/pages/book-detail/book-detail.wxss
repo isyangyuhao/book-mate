@@ -179,8 +179,8 @@ page {
 .operate-container .disable-btn {
     width: 250rpx;
     height: 60rpx;
-    border: 1px solid #aaa;
-    color: #aaa;
+    border: 1px solid #4db6ac;
+    color: #4db6ac;
     font-size: 30rpx;
     text-align: center;
     border-radius: 5px;
