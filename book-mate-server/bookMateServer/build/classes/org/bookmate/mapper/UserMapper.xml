@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.UserMapper" >
+    
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.User" >
+        <id column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="user_username" property="userUsername" jdbcType="VARCHAR" />
+        <result column="user_password" property="userPassword" jdbcType="VARCHAR" />
+        <result column="user_credit" property="userCredit" jdbcType="INTEGER" />
+        <result column="user_create_time" property="userCreateTime" jdbcType="DATE" />
+        <result column="user_message_status" property="userMessageStatus" jdbcType="INTEGER" />
+        <result column="user_new_status" property="userNewStatus" jdbcType="INTEGER" />
+        <result column="user_forum_status" property="userForumStatus" jdbcType="INTEGER" />
+        <result column="user_recommend_status" property="userRecommendStatus" jdbcType="INTEGER" />
+    </resultMap>
+
+	<!-- 根据用户名查找用户实体类 -->
+	<select id="selectUserByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+	select * from user where user_username = #{user_username}
+	</select>
+	
+	<!-- 查询所有用户实体类 -->
+	<select id="selectAllUser" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select * from user
+	</select>
+   
+   <!-- 插入新用户 -->
+   <insert id="insertUser" parameterType="org.bookmate.entities.User">
+   insert into user(user_id, user_username, user_password, user_credit, user_create_time, 
+   user_message_status, user_new_status, user_forum_status, user_recommend_status) 
+   values(#{userId}, #{userUsername}, #{userPassword}, #{userCredit}, #{userCreateTime}, 
+   #{userMessageStatus}, #{userNewStatus}, #{userForumStatus}, #{userRecommendStatus})
+   </insert>
+   
+   <!-- 删除用户 -->
+   <delete id="deleteUserById" parameterType="java.lang.Integer" >delete from user where user_id=#{userId}</delete>
+
+	<!-- 根据用户名进行模糊查询 -->
+	<select id="selectUserByUserNameLike" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from user where user_username like '%${username}%'
+	</select>
+	
+	<!-- 修改用户信息 -->
+	<update id="updateUser" parameterType="org.bookmate.entities.User">
+	update user set user_username = #{userUsername} , user_password = #{userPassword} 
+	, user_credit = #{userCredit} , user_create_time = #{userCreateTime} , user_message_status = #{userMessageStatus} 
+	, user_new_status = #{userNewStatus} , user_forum_status = #{userForumStatus} , 
+	user_recommend_status = #{userRecommendStatus} where user_id = #{userId}
+	</update>
+	
+	<!-- 通过用户id查找用户信息 -->
+	<select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+	select * from user where user_id = #{userId}
+	</select>
+	
+	<!-- 获取全部 -->
+	<select id="selectUserCount" resultType="java.lang.Integer">
+	select count(*) from user
+	</select>
+	
+</mapper>

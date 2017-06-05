@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.ForumCommentMapper" >
+    
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.ForumComment" >
+        <id column="forum_comment_id" property="forumCommentId" jdbcType="INTEGER" />
+        <result column="forum_comment_content" property="forumCommentContent" jdbcType="VARCHAR" />
+        <result column="forum_comment_time" property="forumCommentTime" jdbcType="DATE" />
+        <result column="forum_comment_user_id" property="forumCommentUserId" jdbcType="INTEGER" />
+        <result column="forum_comment_forum_id" property="forumCommentForumId" jdbcType="INTEGER" />
+    </resultMap>
+
+    <resultMap type="org.bookmate.entities.ForumComment" id="forumCommentAndUserRM" extends="BaseResultMap">
+		<association property="user" javaType="org.bookmate.entities.User">
+			<id column="user_id" property="userId" jdbcType="INTEGER" />
+	        <result column="user_username" property="userUsername" jdbcType="VARCHAR" />
+	        <result column="user_password" property="userPassword" jdbcType="VARCHAR" />
+	        <result column="user_credit" property="userCredit" jdbcType="INTEGER" />
+	        <result column="user_create_time" property="userCreateTime" jdbcType="DATE" />
+	        <result column="user_message_status" property="userMessageStatus" jdbcType="INTEGER" />
+	        <result column="user_new_status" property="userNewStatus" jdbcType="INTEGER" />
+	        <result column="user_forum_status" property="userForumStatus" jdbcType="INTEGER" />
+	        <result column="user_recommend_status" property="userRecommendStatus" jdbcType="INTEGER" />
+		</association>
+    </resultMap>
+    
+    <resultMap type="org.bookmate.entities.ForumComment" id="forumCommentAndForumRM" extends="BaseResultMap">
+    	<association property="forum" javaType="org.bookmate.entities.Forum">
+			<id column="forum_id" property="forumId" jdbcType="INTEGER" />
+	        <result column="forum_title" property="forumTitle" jdbcType="VARCHAR" />
+	        <result column="forum_content" property="forumContent" jdbcType="LONGVARCHAR" />
+	        <result column="forum_time" property="forumTime" jdbcType="DATE" />
+	        <result column="forum_user_id" property="forumUserId" jdbcType="INTEGER" />
+	        <result column="forum_book_id" property="forumBookId" jdbcType="INTEGER" />
+		</association>
+    </resultMap>
+    
+    <!-- 根据帖子id查询对应评论以及关联的用户信息 -->
+    <select id="selectForumCommentAndUserByForumId" parameterType="java.lang.Integer" resultMap="forumCommentAndUserRM">
+    select * from forum_comment c, user u
+    where c.forum_comment_user_id = u.user_id and c.forum_comment_forum_id = #{forum_id}
+    </select>
+    
+    <!-- 插入一条新评论 -->
+    <insert id="insertForumComment" parameterType="org.bookmate.entities.ForumComment">
+    insert into forum_comment(forum_comment_id, forum_comment_content, forum_comment_time, 
+    forum_comment_user_id, forum_comment_forum_id) values(#{forumCommentId}, #{forumCommentContent}, 
+    #{forumCommentTime}, #{forumCommentUserId}, #{forumCommentForumId})
+    </insert>
+    
+    <!-- 通过用户id查询评论 -->
+    <select id="selectCommentByUserId" parameterType="java.lang.Integer" resultMap="forumCommentAndForumRM">
+    select * from forum_comment c, forum f 
+    where c.forum_comment_forum_id = f.forum_id and 
+    forum_comment_user_id = #{user_id}
+    </select>
+
+	<!-- 删除评论 -->
+	<delete id="deleteForumComment" parameterType="java.lang.Integer">
+	delete from forum_comment where forum_comment_id = #{id}
+	</delete>
+	
+	<!-- 查找评论数量 -->
+	<select id="selectForumCommentCount" resultType="java.lang.Integer">
+	select count(*) from forum_comment
+	</select>
+
+</mapper>

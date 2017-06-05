@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.AdminMapper" >
+    
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.Admin" >
+        <id column="admin_id" property="adminId" jdbcType="INTEGER" />
+        <result column="admin_username" property="adminUsername" jdbcType="VARCHAR" />
+        <result column="admin_password" property="adminPassword" jdbcType="VARCHAR" />
+        <result column="admin_work" property="adminWork" jdbcType="VARCHAR" />
+        <result column="admin_email" property="adminEmail" jdbcType="VARCHAR" />
+        <result column="admin_create_time" property="adminCreateTime" jdbcType="DATE" />
+    </resultMap>
+
+	<!-- 根据管理员名查询管理员实体类 -->
+	<select id="selectAdminByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from admin where admin_username = #{admin_username}
+	</select>
+	
+	<!-- 插入管理员实体类 -->
+	<insert id="insertAdmin" parameterType="org.bookmate.entities.Admin">
+		insert into admin(admin_id, admin_username, admin_password, admin_work, admin_email, admin_create_time)
+		values(#{adminId}, #{adminUsername}, #{adminPassword}, #{adminWork}, #{adminEmail}, #{adminCreateTime})
+	</insert>
+	
+	<!-- 查询所有管理员实体类 -->
+	<select id="selectAllAdmin" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select * from admin
+	</select>
+	
+	<!-- 根据id删除管理员 -->
+	<delete id="deleteAdmin" parameterType="java.lang.Integer">
+		delete from admin where admin_id = #{admin_id}
+	</delete>
+	
+	<!-- 根据id查询管理员实体类 -->
+	<select id="selectAdminById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select * from admin where admin_id = #{admin_id}
+	</select>
+	
+	<!-- 更新管理员数据 -->
+	<update id="updateAdmin" parameterType="org.bookmate.entities.Admin">
+		update admin set admin_password = #{adminPassword}, admin_work = #{adminWork},
+		admin_email = #{adminEmail}, admin_create_time = #{adminCreateTime}, 
+		admin_username = #{adminUsername} where admin_id = #{adminId}
+	</update>
+	
+	<!-- 根据管理员名进行模糊查询 -->
+	<select id="selectAdminByUsernameLike" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from admin where admin_username like '%${name}%'
+	</select>
+
+</mapper>

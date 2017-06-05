@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.AdminMessageMapper" >
+
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.AdminMessage" >
+        <id column="admin_message_id" property="adminMessageId" jdbcType="INTEGER" />
+        <result column="admin_message_title" property="adminMessageTitle" jdbcType="VARCHAR" />
+        <result column="admin_message_content" property="adminMessageContent" jdbcType="LONGVARCHAR" />
+        <result column="admin_message_time" property="adminMessageTime" jdbcType="DATE" />
+        <result column="admin_id" property="adminId" jdbcType="INTEGER" />
+    </resultMap>
+    
+    <!-- 管理员消息和对应关联管理员实体类结果集映射 -->
+    <resultMap 
+    	type="org.bookmate.entities.AdminMessage" id="adminMessageAndAdminRM" extends="BaseResultMap">
+		<association property="admin" javaType="org.bookmate.entities.Admin">
+	        <id column="admin_id" property="adminId" jdbcType="INTEGER" />
+	        <result column="admin_username" property="adminUsername" jdbcType="VARCHAR" />
+	        <result column="admin_password" property="adminPassword" jdbcType="VARCHAR" />
+	        <result column="admin_work" property="adminWork" jdbcType="VARCHAR" />
+	        <result column="admin_email" property="adminEmail" jdbcType="VARCHAR" />
+	        <result column="admin_create_time" property="adminCreateTime" jdbcType="DATE" />
+		</association>	
+    </resultMap>
+
+	<!-- 查询所有的管理员通知 -->
+    <select id="selectAllAdminMessage" resultMap="BaseResultMap">
+    	select * from admin_message
+    </select>
+    
+    <!-- 查询所有的管理员通知和对应的发布用户 -->
+    <select id="selectAllAdminMessageAndAdmin" resultMap="adminMessageAndAdminRM">
+    	select * from admin_message m, admin a
+    	where m.admin_id = a.admin_id
+    </select>
+    
+    <!-- 添加管理员通知 -->
+    <insert id="insertAdminMessage" parameterType="org.bookmate.entities.AdminMessage" >
+    	insert into admin_message(admin_message_id,admin_message_title,admin_message_content,admin_message_time,admin_id)
+    	values(#{adminMessageId},#{adminMessageTitle},#{adminMessageContent},#{adminMessageTime},#{adminId})
+    </insert>
+    
+    <!-- 编辑管理员通知 -->
+    <update id="updateAdminMessage" parameterType="org.bookmate.entities.AdminMessage">
+    	update admin_message set
+    	admin_message_title=#{adminMessageTitle},
+    	admin_message_content=#{adminMessageContent},
+    	admin_message_time=#{adminMessageTime},
+    	admin_id = #{adminId}
+    	where admin_message_id = #{adminMessageId}
+    </update>
+    
+    <!-- 获取管理员通知 -->
+    <select id="selectAdminMessageAndAdminById" parameterType="java.lang.Integer" resultMap="adminMessageAndAdminRM">
+    	select * from admin_message m, admin a where m.admin_id = a.admin_id
+    	and m.admin_message_id = #{adminMessageId}
+    </select>
+    
+    <!-- 删除管理员通知 -->
+	<delete id="deleteAdminMessageById" parameterType="java.lang.Integer">delete from admin_message where admin_message_id = #{admin_message_id}</delete>
+
+	<!-- 根据管理员通知标题进行模糊查询 -->
+	<select id="selectAdminMessageByTitleLike" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from admin_message where admin_message_title like '%${title}%'
+	</select>
+</mapper>

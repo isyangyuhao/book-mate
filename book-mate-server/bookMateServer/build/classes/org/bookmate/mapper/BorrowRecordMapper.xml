@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.BorrowRecordMapper" >
+
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.BorrowRecord" >
+        <id column="borrow_record_id" property="borrowRecordId" jdbcType="INTEGER" />
+        <result column="borrow_record_user_id" property="borrowRecordUserId" jdbcType="INTEGER" />
+        <result column="borrow_record_classify_id" property="borrowRecordClassifyId" jdbcType="INTEGER" />
+        <result column="borrow_record_number" property="borrowRecordNumber" jdbcType="INTEGER" />
+    </resultMap>
+
+    <!-- 插入一条借阅记录 -->
+    <insert id="insertBorrowRecord" parameterType="org.bookmate.entities.BorrowRecord">
+    insert into borrow_record(borrow_record_id, borrow_record_user_id, borrow_record_classify_id, borrow_record_number) values(#{borrowRecordId}, #{borrowRecordUserId}, #{borrowRecordClassifyId}, #{borrowRecordNumber})
+    </insert>
+    
+    <!-- 通过用户id和分类id查询 -->
+    <select id="selectBorrowByUserAndClassify" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select * from borrow_record where borrow_record_user_id = #{userId} and 
+    borrow_record_classify_id = #{classifyId}
+    </select>
+    
+    <!-- 将指定id的记录数量加一 -->
+    <update id="addBorrowNumberById" parameterType="java.lang.Integer">
+    update borrow_record set borrow_record_number = borrow_record_number + 1
+    where borrow_record_id = #{id}
+    </update>
+    
+    <!-- 通过id获取借阅记录 -->
+    <select id="selectBorrowRecordById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from borrow_record where borrow_record_id = #{id}
+    </select>
+    
+    <!-- 通过用户id获取借阅记录 -->
+    <select id="selectBorrowRecordByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from borrow_record where borrow_record_user_id = #{userId}
+    </select>
+
+</mapper>

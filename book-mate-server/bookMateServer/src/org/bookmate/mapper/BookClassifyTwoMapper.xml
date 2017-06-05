@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.BookClassifyTwoMapper" >
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.BookClassifyTwo" >
+        <id column="book_classify_two_id" property="bookClassifyTwoId" jdbcType="INTEGER" />
+        <result column="book_classify_two_name" property="bookClassifyTwoName" jdbcType="VARCHAR" />
+    </resultMap>
+
+   <!-- 插入记录 -->
+   <insert id="insertBookClassifyTwo" parameterType="org.bookmate.entities.BookClassifyTwo">
+   insert into book_classify_two(book_classify_two_id, book_classify_two_name)
+   values(#{bookClassifyTwoId}, #{bookClassifyTwoName})
+   </insert>
+   
+   <!-- 通过二级分类名查找对应的id -->
+   <select id="selectClassifyIdByBame" parameterType="java.lang.String" resultType="java.lang.Integer">
+   select book_classify_two_id from book_classify_two where book_classify_two_name = #{name}
+   </select>
+   
+   <!-- 通过id查找对应的二级分类信息 -->
+   <select id="selectClassifyById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+   select * from book_classify_two where book_classify_two_id = #{id}
+   </select>
+   
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.BrowseRecordMapper" >
+    
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.BrowseRecord" >
+        <id column="browse_record_id" property="browseRecordId" jdbcType="INTEGER" />
+        <result column="browse_record_user_id" property="browseRecordUserId" jdbcType="INTEGER" />
+        <result column="browse_record_classify_id" property="browseRecordClassifyId" jdbcType="INTEGER" />
+        <result column="browse_record_number" property="browseRecordNumber" jdbcType="INTEGER" />
+    </resultMap>
+	
+	<!-- 插入一条借阅记录 -->
+    <insert id="insertBrowseRecord" parameterType="org.bookmate.entities.BrowseRecord">
+    insert into browse_record(browse_record_id, browse_record_user_id, browse_record_classify_id, browse_record_number) values(#{browseRecordId}, #{browseRecordUserId}, #{browseRecordClassifyId}, #{browseRecordNumber})
+    </insert>
+    
+    <!-- 通过用户id和分类id查询 -->
+    <select id="selectBrowseByUserAndClassify" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select * from browse_record where browse_record_user_id = #{userId} and 
+    browse_record_classify_id = #{classifyId}
+    </select>
+    
+    <!-- 将指定id的记录数量加一 -->
+    <update id="addBrowseNumberById" parameterType="java.lang.Integer">
+    update browse_record set browse_record_number = browse_record_number + 1
+    where browse_record_id = #{id}
+    </update>
+    
+    <!-- 查询所有的记录 -->
+    <select id="selectAllBrowse" resultMap="BaseResultMap">
+    select * from browse_record
+    </select>
+    
+    <!-- 更新指定的记录 -->
+    <update id="updateBrowseNumber" parameterType="java.util.Map">
+    update browse_record set browse_record_number = #{number}
+    where browse_record_id = #{id}
+    </update> 
+
+</mapper>

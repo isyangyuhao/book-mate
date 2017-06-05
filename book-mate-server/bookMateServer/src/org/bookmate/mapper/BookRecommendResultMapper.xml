@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.BookRecommendResultMapper" >
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.BookRecommendResult" >
+        <id column="book_recommend_result_id" property="bookRecommendResultId" jdbcType="INTEGER" />
+        <result column="book_recommend_result_book" property="bookRecommendResultBook" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r1" property="bookRecommendResultR1" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r2" property="bookRecommendResultR2" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r3" property="bookRecommendResultR3" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r4" property="bookRecommendResultR4" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r5" property="bookRecommendResultR5" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r6" property="bookRecommendResultR6" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r7" property="bookRecommendResultR7" jdbcType="INTEGER" />
+        <result column="book_recommend_result_r8" property="bookRecommendResultR8" jdbcType="INTEGER" />
+    </resultMap>
+
+    <!-- 通过图书id查找推荐的其他图书 -->
+    <select id="selectBookRecommendResultByBook" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from book_recommend_result where book_recommend_result_book = #{bookId}
+    </select>
+    
+</mapper>

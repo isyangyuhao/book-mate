@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.BorrowMapper" >
+    
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.Borrow" >
+        <id column="borrow_id" property="borrowId" jdbcType="INTEGER" />
+        <result column="borrow_book_id" property="borrowBookId" jdbcType="INTEGER" />
+        <result column="borrow_user_id" property="borrowUserId" jdbcType="INTEGER" />
+        <result column="borrow_start_time" property="borrowStartTime" jdbcType="DATE" />
+        <result column="borrow_end_time" property="borrowEndTime" jdbcType="DATE" />
+        <result column="borrow_status" property="borrowStatus" jdbcType="INTEGER" />
+        <result column="borrow_grade" property="borrowGrade" jdbcType="INTEGER" />
+    </resultMap>
+    
+    <resultMap type="org.bookmate.entities.Borrow" id="borrowAndUserAndBookRM" extends="BaseResultMap">
+    	<association property="user" javaType="org.bookmate.entities.User">
+    		<id column="user_id" property="userId" jdbcType="INTEGER" />
+	        <result column="user_username" property="userUsername" jdbcType="VARCHAR" />
+	        <result column="user_password" property="userPassword" jdbcType="VARCHAR" />
+	        <result column="user_credit" property="userCredit" jdbcType="INTEGER" />
+	        <result column="user_create_time" property="userCreateTime" jdbcType="DATE" />
+	        <result column="user_message_status" property="userMessageStatus" jdbcType="INTEGER" />
+	        <result column="user_new_status" property="userNewStatus" jdbcType="INTEGER" />
+	        <result column="user_forum_status" property="userForumStatus" jdbcType="INTEGER" />
+	        <result column="user_recommend_status" property="userRecommendStatus" jdbcType="INTEGER" />
+    	</association>
+    	<association property="book" javaType="org.bookmate.entities.Book">
+    		<id column="book_id" property="bookId" jdbcType="INTEGER" />
+	        <result column="book_number" property="bookNumber" jdbcType="INTEGER" />
+	        <result column="book_name" property="bookName" jdbcType="VARCHAR" />
+	        <result column="book_author" property="bookAuthor" jdbcType="VARCHAR" />
+	        <result column="book_press" property="bookPress" jdbcType="VARCHAR" />
+	        <result column="book_image_big" property="bookImageBig" jdbcType="VARCHAR" />
+	        <result column="book_image_small" property="bookImageSmall" jdbcType="VARCHAR" />
+	        <result column="book_classify_one" property="bookClassifyOne" jdbcType="VARCHAR" />
+	        <result column="book_classify_two" property="bookClassifyTwo" jdbcType="VARCHAR" />
+	        <result column="book_desc" property="bookDesc" jdbcType="LONGVARCHAR" />
+	        <result column="book_address" property="bookAddress" jdbcType="VARCHAR" />
+	        <result column="book_grade" property="bookGrade" jdbcType="DOUBLE" />
+	        <result column="book_sum" property="bookSum" jdbcType="INTEGER" />
+	        <result column="book_residue" property="bookResidue" jdbcType="INTEGER" /> 
+    	</association>
+    </resultMap>
+
+    <!-- 插入一条新借书记录 -->
+    <insert id="insertBorrow" parameterType="org.bookmate.entities.Borrow">
+	  <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+	  select LAST_INSERT_ID()
+	  </selectKey>
+    insert into borrow(borrow_id, borrow_book_id, borrow_user_id, borrow_start_time, 
+    borrow_end_time, borrow_status, borrow_grade) values(#{borrowId}, #{borrowBookId}, 
+    #{borrowUserId}, #{borrowStartTime}, #{borrowEndTime}, #{borrowStatus}, #{borrowGrade})
+    </insert>
+    
+    <!-- 通过用户id,图书id,状态查找借阅记录 -->
+    <select id="selectBorrowByUserAndBookAndStatus" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select * from borrow where borrow_user_id = #{userId} and borrow_book_id = #{bookId} and borrow_status = #{status}
+    </select>
+        
+    <!-- 通过用户id,图书id,状态删除借阅记录 -->
+    <delete id="deleteBorrowByUserAndBookAndStatus" parameterType="java.util.Map">
+    delete from borrow
+    where borrow_user_id = #{userId} and borrow_book_id = #{bookId} and borrow_status = #{status}
+    </delete>
+    
+    <!-- 通过用户id,状态查询借阅记录 -->
+	<select id="selectBorrowByUserAndStatus" parameterType="java.util.Map" resultMap="borrowAndUserAndBookRM">
+	select * from borrow br, book bo where br.borrow_book_id = bo.book_id and 
+	br.borrow_user_id = #{userId} and br.borrow_status = #{status}
+	</select>
+	
+	<!-- 通过id获取详细借阅记录 -->
+	<select id="selectBorrowById" parameterType="java.lang.Integer" resultMap="borrowAndUserAndBookRM">
+	select * from borrow br, user u, book bo
+	where br.borrow_user_id = u.user_id and br.borrow_book_id = bo.book_id
+	and br.borrow_id = #{id}
+	</select>
+	
+	<!-- 更新借阅记录 -->
+	<update id="updateBorrow" parameterType="org.bookmate.entities.Borrow">
+	update borrow set borrow_book_id = #{borrowBookId}, borrow_user_id = #{borrowUserId}, 
+	borrow_start_time = #{borrowStartTime}, borrow_end_time = #{borrowEndTime}, borrow_status = #{borrowStatus}, 
+	borrow_grade = #{borrowGrade} where borrow_id = #{borrowId}
+	</update>
+	
+	<!-- 查询借阅数量 -->
+	<select id="selectBorrowCount" resultType="java.lang.Integer">
+	select count(*) from borrow where borrow_status = 1
+	</select>
+	
+	<!-- 查询还书数量 -->
+	<select id="selectReturnCount" resultType="java.lang.Integer">
+	select count(*) from borrow where borrow_status = 2
+	</select>
+	
+	<!-- 获取全部借阅信息 -->
+	<select id="selectAllBorrow" resultMap="borrowAndUserAndBookRM">
+	select * from borrow br, book bo, user u where br.borrow_book_id = bo.book_id and 
+	br.borrow_user_id = u.user_id
+	</select>
+	
+	<!-- 获取所有的预订借阅信息 -->
+	<select id="selectAllReserveBorrow" resultMap="borrowAndUserAndBookRM">
+	select * from borrow where borrow_status = -1
+	</select>
+	
+	<!-- 删除借阅信息 -->
+	<delete id="deleteBorrowById" parameterType="java.lang.Integer">
+	delete from borrow where borrow_id = #{id}
+	</delete>
+	
+</mapper>

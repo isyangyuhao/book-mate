@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bookmate.mapper.BookMapper" >
+
+    <resultMap id="BaseResultMap" type="org.bookmate.entities.Book" >
+        <id column="book_id" property="bookId" jdbcType="INTEGER" />
+        <result column="book_number" property="bookNumber" jdbcType="INTEGER" />
+        <result column="book_name" property="bookName" jdbcType="VARCHAR" />
+        <result column="book_author" property="bookAuthor" jdbcType="VARCHAR" />
+        <result column="book_press" property="bookPress" jdbcType="VARCHAR" />
+        <result column="book_image_big" property="bookImageBig" jdbcType="VARCHAR" />
+        <result column="book_image_small" property="bookImageSmall" jdbcType="VARCHAR" />
+        <result column="book_classify_one" property="bookClassifyOne" jdbcType="VARCHAR" />
+        <result column="book_classify_two" property="bookClassifyTwo" jdbcType="VARCHAR" />
+        <result column="book_desc" property="bookDesc" jdbcType="LONGVARCHAR" />
+        <result column="book_address" property="bookAddress" jdbcType="VARCHAR" />
+        <result column="book_grade" property="bookGrade" jdbcType="DOUBLE" />
+        <result column="book_sum" property="bookSum" jdbcType="INTEGER" />
+        <result column="book_residue" property="bookResidue" jdbcType="INTEGER" /> 
+    </resultMap>
+
+	<!-- 通过图书id查询图书信息 -->
+	<select id="selectBookById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select * from book where book_id = #{book_id}
+	</select>
+	
+	<!-- 插入新图书记录 -->
+	<insert id="insertBook" parameterType="org.bookmate.entities.Book">
+		insert into book(book_id, book_number, book_name, book_author, book_press,
+		 book_image_big, book_image_small, book_classify_one, book_classify_two, book_desc) 
+		 values(#{bookId}, #{bookNumber}, #{bookName}, #{bookAuthor}, #{bookPress}, 
+		 #{bookImageBig}, #{bookImageSmall}, #{bookClassifyOne}, #{bookClassifyTwo}, #{bookDesc})
+	</insert>
+	
+	<!-- 插入新图书记录2 -->
+	<insert id="insertBook2" parameterType="org.bookmate.entities.Book">
+		insert into book(book_id, book_number, book_name, book_author, book_press,
+		 book_image_big, book_image_small, book_classify_one, book_classify_two, book_desc, book_address, book_grade, book_sum, book_residue) 
+		 values(#{bookId}, #{bookNumber}, #{bookName}, #{bookAuthor}, #{bookPress}, 
+		 #{bookImageBig}, #{bookImageSmall}, #{bookClassifyOne}, #{bookClassifyTwo}, #{bookDesc}, #{bookAddress}, #{bookGrade}, #{bookSum}, #{bookResidue})
+	</insert>
+	
+	<!-- 查询所有的图书一级分类 -->
+	<select id="selectAllClassifyOne" resultType="java.lang.String">
+	select distinct book_classify_one from book
+	</select>
+	
+	<!-- 根据图书一级分类查询对应类别的图书 -->
+	<select id="selectBookByClassifyOne" parameterType="java.lang.String" resultMap="BaseResultMap">
+	select * from book where book_classify_one = #{book_classify_one} limit 30
+	</select>
+	
+	<!-- 更新图书信息 -->
+	<update id="updateBook" parameterType="org.bookmate.entities.Book">
+	update book set
+	book_number=#{bookNumber}, book_name=#{bookName}, 
+	book_author=#{bookAuthor}, book_press=#{bookPress}, book_image_big=#{bookImageBig}, 
+	book_image_small=#{bookImageSmall}, book_classify_one=#{bookClassifyOne}, 
+	book_classify_two=#{bookClassifyTwo}, book_desc = #{bookDesc}, book_address = #{bookAddress}, 
+	book_sum = #{bookSum}, book_residue = #{bookResidue}, 
+	book_grade=#{bookGrade} where book_id=#{bookId}
+	</update>
+
+	<!-- 获取全部图书实体类 -->
+	<select id="selectAllBook" resultMap="BaseResultMap">
+	select * from book
+	</select>
+	
+	<!-- 通过图书名模糊查询图书 -->
+	<select id="selectBookByNameLike" parameterType="java.lang.String" resultMap="BaseResultMap">
+	select * from book where book_name like '%${book_name}%'
+	</select>
+	
+	<!-- 获取全部的图书二级分类 -->
+	<select id="selectAllClassifyTwo" resultType="java.lang.String">
+	select distinct book_classify_two from book
+	</select>
+	
+	<!-- 查询图书数量 -->
+	<select id="selectBookCount" resultType="java.lang.Integer">
+	select count(*) from book
+	</select>
+	
+	<!-- 通过二级分类获取对应的图书集合 -->
+	<select id="selectBookByClassifyTwoName" resultType="java.lang.Integer" resultMap="BaseResultMap">
+	select * from book where book_classify_two = #{classifyTwoName}
+	</select>
+	
+	<!-- 获取评分在前8名的图书 -->
+	<select id="selectHotBook" resultMap="BaseResultMap">
+	select * from book order by book_grade desc limit 8
+	</select>
+	
+	<!-- 获取最后添加的8本图书 -->
+	<select id="selectNewBook" resultMap="BaseResultMap">
+	select * from book order by book_id desc limit 8
+	</select>
+
+</mapper>
