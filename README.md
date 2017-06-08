@@ -68,21 +68,21 @@
 
 ### 微信小程序客户端
 
-![客户端界面1](book-mate-wechat/images/readme/photo1.png)
+![客户端界面1](book-mate-server/bookMateServer/WebContent/readme/photo1.png)
 
-![客户端界面2](book-mate-wechat/images/readme/photo2.png)
+![客户端界面2](book-mate-server/bookMateServer/WebContent/readme/photo2.png)
 
 ### 管理员扫码端
 
-![扫码端界面](book-mate-wechat/images/readme/photo3.png)
+![扫码端界面](book-mate-server/bookMateServer/WebContent/readme/photo3.png)
 
 ### 后台管理程序
 
-![后台管理主界面](book-mate-wechat/images/readme/photo4.png)
+![后台管理主界面](book-mate-server/bookMateServer/WebContent/readme/photo4.png)
 
-![图书管理界面](book-mate-wechat/images/readme/photo5.png)
+![图书管理界面](book-mate-server/bookMateServer/WebContent/readme/photo5.png)
 
-![添加管理员界面](book-mate-wechat/images/readme/photo6.png)
+![添加管理员界面](book-mate-server/bookMateServer/WebContent/readme/photo6.png)
 
 
 
