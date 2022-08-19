@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: book-mate-server-boot
+  datasource:
+    url: jdbc:mysql://localhost:3316/book_mate?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: username
+    password: password
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+
+mybatis-plus:
+  mapper-locations: classpath*:org/bookmate/mapper/*Mapper.xml
+  global-config:
+    db-config:
+      # 默认数据库表下划线命名
+      table-underline: true
+  configuration:
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 返回类型为Map,显示null对应的字段
+    call-setters-on-nulls: true
+    map-underscore-to-camel-case: true
